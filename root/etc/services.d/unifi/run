@@ -1,0 +1,29 @@
+#!/bin/sh
+# UniFi Network Application s6 service
+
+# Wait for MongoDB to be ready (check if socket file exists)
+echo "Waiting for MongoDB..."
+while [ ! -S /var/run/mongodb/mongodb-27117.sock ]; do
+    sleep 2
+done
+# Give MongoDB a moment to fully initialize
+sleep 3
+echo "MongoDB is ready"
+
+export JAVA_HOME=/usr/local/openjdk17
+export LC_ALL=en_US.UTF-8
+
+# Signal readiness when the port is responsive
+s6-ready-when fetch -qo /dev/null --no-verify-hostname --no-verify-peer https://localhost:8443/status
+
+# Start UniFi Controller
+# Java 17+ requires --add-opens for UniFi's reflection access
+cd /usr/local/share/java/unifi
+exec /usr/local/bin/s6-setuidgid bsd /usr/local/openjdk17/bin/java \
+    -Xmx1024M \
+    --add-opens java.base/java.lang=ALL-UNNAMED \
+    --add-opens java.base/java.time=ALL-UNNAMED \
+    --add-opens java.base/sun.security.util=ALL-UNNAMED \
+    --add-opens java.base/java.io=ALL-UNNAMED \
+    --add-opens java.rmi/sun.rmi.transport=ALL-UNNAMED \
+    -jar lib/ace.jar start

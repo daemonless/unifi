@@ -1,0 +1,68 @@
+# Woodpecker CI configuration
+# Fetches centralized build script from daemonless/daemonless
+
+steps:
+  - name: build-latest
+    image: /bin/sh
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
+      GITHUB_ACTOR:
+        from_secret: GITHUB_USER
+    commands:
+      - |
+        mkdir -p scripts
+        fetch -qo scripts/build.sh \
+          "https://raw.githubusercontent.com/daemonless/daemonless/build-v1.0.0/scripts/build.sh"
+        chmod +x scripts/build.sh
+        ./scripts/build.sh \
+          --doas \
+          --registry ghcr.io \
+          --image ghcr.io/daemonless/unifi \
+          --tag latest \
+          --tag-version \
+          --skip-wip \
+          --login --push
+
+  - name: build-pkg
+    image: /bin/sh
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
+      GITHUB_ACTOR:
+        from_secret: GITHUB_USER
+    commands:
+      - |
+        mkdir -p scripts
+        fetch -qo scripts/build.sh \
+          "https://raw.githubusercontent.com/daemonless/daemonless/build-v1.0.0/scripts/build.sh"
+        chmod +x scripts/build.sh
+        # Build :pkg (quarterly packages)
+        ./scripts/build.sh \
+          --doas \
+          --registry ghcr.io \
+          --image ghcr.io/daemonless/unifi \
+          --containerfile Containerfile.pkg \
+          --base-version 15-quarterly \
+          --tag pkg \
+          --version-suffix -pkg \
+          --skip-wip \
+          --login --push
+        # Build :pkg-latest (latest packages)
+        ./scripts/build.sh \
+          --doas \
+          --registry ghcr.io \
+          --image ghcr.io/daemonless/unifi \
+          --containerfile Containerfile.pkg \
+          --base-version 15 \
+          --tag pkg-latest \
+          --version-suffix -pkg-latest \
+          --skip-wip \
+          --login --push
+
+when:
+  - event: push
+    branch: main
+    path:
+      exclude: [ "*.md", "docs/**", "LICENSE", ".gitignore" ]
+  - event: manual

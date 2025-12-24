@@ -1,0 +1,49 @@
+#!/bin/sh
+# UniFi configuration setup
+
+PUID=${PUID:-1000}
+PGID=${PGID:-1000}
+
+echo "Setting up UniFi with PUID=$PUID PGID=$PGID"
+
+# Modify unifi user/group to match PUID/PGID
+pw groupmod unifi -g "$PGID" 2>/dev/null || true
+
+# Create required directories
+mkdir -p /config/db /config/logs /var/run/unifi /var/run/mongodb
+
+# Ensure system.properties exists with external MongoDB config (UniFi 10.x)
+# This prevents UniFi from trying to run its bundled Linux mongod binary
+if [ ! -f /config/system.properties ]; then
+    echo "db.mongo.local=false" > /config/system.properties
+    echo "db.mongo.uri=mongodb://127.0.0.1:27117/ace" >> /config/system.properties
+elif ! grep -q "db.mongo.local" /config/system.properties 2>/dev/null; then
+    echo "db.mongo.local=false" >> /config/system.properties
+    echo "db.mongo.uri=mongodb://127.0.0.1:27117/ace" >> /config/system.properties
+fi
+
+# Configure system_ip for device inform (allows bridge networking without --network host)
+# This tells devices which IP to use to reach the controller
+if [ -n "$SYSTEM_IP" ]; then
+    echo "Configuring inform host: $SYSTEM_IP"
+    if grep -q "^system_ip=" /config/system.properties 2>/dev/null; then
+        sed -i '' "s|^system_ip=.*|system_ip=$SYSTEM_IP|" /config/system.properties
+    else
+        echo "system_ip=$SYSTEM_IP" >> /config/system.properties
+    fi
+fi
+
+# Set ownership - UniFi installs to /usr/local/share/java/unifi
+# MongoDB needs write access to db and logs directories
+chown -R bsd:bsd /config/db /config/logs /var/run/mongodb
+# Fix parent directory permissions for direct download version
+chmod 755 /usr/local/share/java 2>/dev/null || true
+chown -R bsd:bsd /var/run/unifi /usr/local/share/java/unifi /config/system.properties
+
+# Ensure data symlink exists
+if [ ! -L /usr/local/share/java/unifi/data ]; then
+    rm -rf /usr/local/share/java/unifi/data
+    ln -sf /config /usr/local/share/java/unifi/data
+fi
+
+echo "UniFi configuration complete"

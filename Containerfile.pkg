@@ -1,0 +1,53 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+LABEL org.opencontainers.image.title="unifi" \
+      org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
+      org.opencontainers.image.source="https://github.com/daemonless/unifi" \
+      org.opencontainers.image.url="https://ui.com/" \
+      org.opencontainers.image.documentation="https://help.ui.com/" \
+      org.opencontainers.image.licenses="Proprietary" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.port="8443" \
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      org.freebsd.jail.allow.mlock="required"
+
+# Install UniFi 10 from FreeBSD packages
+RUN pkg update && \
+    pkg install -y unifi10 && \
+    UNIFI_VERSION=$(pkg info unifi10 | sed -n 's/.*Version.*: *//p') && \
+    mkdir -p /app && echo "$UNIFI_VERSION" > /app/version && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Create config directory and symlink data dir
+# UniFi installs to /usr/local/share/java/unifi
+RUN mkdir -p /config /var/run/unifi && \
+    rm -rf /usr/local/share/java/unifi/data && \
+    ln -sf /config /usr/local/share/java/unifi/data && \
+    chown -R bsd:bsd /config /var/run/unifi /usr/local/share/java/unifi
+
+# Copy service definition and init scripts
+COPY root/ /
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/*/run /etc/cont-init.d/* 2>/dev/null || true
+
+# Set up s6 service links for unifi and mongodb
+RUN mkdir -p /run/s6/services/unifi /run/s6/services/mongodb && \
+    ln -sf /etc/services.d/unifi/run /run/s6/services/unifi/run && \
+    ln -sf /etc/services.d/mongodb/run /run/s6/services/mongodb/run
+
+# UniFi ports:
+# 8443  - Web UI (HTTPS)
+# 8080  - Device inform
+# 8843  - Guest portal HTTPS
+# 8880  - Guest portal HTTP
+# 6789  - Mobile throughput test
+# 3478/udp - STUN
+# 10001/udp - Device discovery
+EXPOSE 8443 8080 8843 8880 6789 3478/udp 10001/udp
+VOLUME /config
+

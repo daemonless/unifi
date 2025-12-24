@@ -1,0 +1,15 @@
+#!/bin/sh
+# MongoDB s6 service for UniFi
+# Note: Running as root due to FreeBSD jail nullfs permission issues
+# with user namespace. MongoDB is still confined within the jail.
+
+# Ensure db directory exists with proper permissions
+mkdir -p /config/db /var/run/mongodb
+chown -R mongodb:mongodb /config/db /var/run/mongodb
+
+echo "Starting MongoDB for UniFi..."
+exec /usr/local/bin/mongod \
+    --dbpath /config/db \
+    --port 27117 \
+    --unixSocketPrefix /var/run/mongodb \
+    --bind_ip 127.0.0.1
