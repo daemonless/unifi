@@ -2,35 +2,37 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
+
 LABEL org.opencontainers.image.title="unifi" \
-      org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
-      org.opencontainers.image.source="https://github.com/daemonless/unifi" \
-      org.opencontainers.image.url="https://ui.com/" \
-      org.opencontainers.image.documentation="https://help.ui.com/" \
-      org.opencontainers.image.licenses="Proprietary" \
-      org.opencontainers.image.vendor="daemonless" \
-      org.opencontainers.image.authors="daemonless" \
-      io.daemonless.port="8443" \
-      io.daemonless.arch="${FREEBSD_ARCH}" \
-      org.freebsd.jail.allow.mlock="required"
+    org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
+    org.opencontainers.image.source="https://github.com/daemonless/unifi" \
+    org.opencontainers.image.url="https://ui.com/" \
+    org.opencontainers.image.documentation="https://help.ui.com/" \
+    org.opencontainers.image.licenses="Proprietary" \
+    org.opencontainers.image.vendor="daemonless" \
+    org.opencontainers.image.authors="daemonless" \
+    io.daemonless.port="8443" \
+    io.daemonless.arch="${FREEBSD_ARCH}" \
+    org.freebsd.jail.allow.mlock="required" \
+    io.daemonless.category="Utilities" \
+    io.daemonless.upstream-mode="ubiquiti" \
+    io.daemonless.packages="${PACKAGES}"
 
 # Install dependencies (OpenJDK 17, MongoDB 7.0)
 # snappyjava provides native FreeBSD snappy library (avoids bundled Linux lib)
 RUN pkg update && \
     pkg install -y \
-        openjdk17 \
-        mongodb70 \
-        snappyjava \
-        ca_root_nss && \
+    ${PACKAGES} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install UniFi from Ubiquiti
 RUN mkdir -p /usr/local/share/java/unifi && \
     UNIFI_URL=$(fetch -qo - "https://fw-update.ubnt.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~platform~~unix&filter=eq~~channel~~release" | \
-        sed -n 's/.*"href":"\([^"]*\/data\)".*/\1/p' | sed -n '1p') && \
+    sed -n 's/.*"href":"\([^"]*\/data\)".*/\1/p' | sed -n '1p') && \
     UNIFI_VERSION=$(fetch -qo - "https://fw-update.ubnt.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~platform~~unix&filter=eq~~channel~~release" | \
-        sed -n 's/.*"version":"v\([^+]*\).*/\1/p' | sed -n '1p') && \
+    sed -n 's/.*"version":"v\([^+]*\).*/\1/p' | sed -n '1p') && \
     echo "Downloading UniFi ${UNIFI_VERSION}..." && \
     fetch -qo - "${UNIFI_URL}" | tar -xzf - -C /usr/local/share/java/unifi --strip-components=1 && \
     echo "${UNIFI_VERSION}" > /usr/local/share/java/unifi/version.txt && \
