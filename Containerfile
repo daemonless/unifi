@@ -4,7 +4,7 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
 
-LABEL org.opencontainers.image.title="unifi" \
+LABEL org.opencontainers.image.title="UniFi" \
     org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
     org.opencontainers.image.source="https://github.com/daemonless/unifi" \
     org.opencontainers.image.url="https://ui.com/" \
