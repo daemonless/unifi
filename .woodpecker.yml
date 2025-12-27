@@ -13,7 +13,7 @@ steps:
       - |
         mkdir -p scripts
         fetch -qo scripts/build.sh \
-          "https://raw.githubusercontent.com/daemonless/daemonless/build-v1.1.0/scripts/build.sh"
+          "https://raw.githubusercontent.com/daemonless/daemonless/build-v1.1.1/scripts/build.sh"
         chmod +x scripts/build.sh
         ./scripts/build.sh \
           --doas \
@@ -35,7 +35,7 @@ steps:
       - |
         mkdir -p scripts
         fetch -qo scripts/build.sh \
-          "https://raw.githubusercontent.com/daemonless/daemonless/build-v1.1.0/scripts/build.sh"
+          "https://raw.githubusercontent.com/daemonless/daemonless/build-v1.1.1/scripts/build.sh"
         chmod +x scripts/build.sh
         # Build :pkg (quarterly packages)
         ./scripts/build.sh \
