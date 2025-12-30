@@ -2,6 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PKG_NAME=unifi10
 LABEL org.opencontainers.image.title="UniFi" \
       org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
       org.opencontainers.image.source="https://github.com/daemonless/unifi" \
@@ -12,12 +13,13 @@ LABEL org.opencontainers.image.title="UniFi" \
       org.opencontainers.image.authors="daemonless" \
       io.daemonless.port="8443" \
       io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.pkg-name="${PKG_NAME}" \
       org.freebsd.jail.allow.mlock="required"
 
-# Install UniFi 10 from FreeBSD packages
+# Install from FreeBSD packages
 RUN pkg update && \
-    pkg install -y unifi10 && \
-    UNIFI_VERSION=$(pkg info unifi10 | sed -n 's/.*Version.*: *//p') && \
+    pkg install -y ${PKG_NAME} && \
+    UNIFI_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
     mkdir -p /app && echo "$UNIFI_VERSION" > /app/version && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
