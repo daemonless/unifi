@@ -24,7 +24,6 @@ This image uses `s6-log` for internal log rotation.
 
 ```bash
 podman run -d --name unifi \
-  --annotation 'org.freebsd.jail.allow.mlock=true' \
   --network host \
   -e PUID=1000 -e PGID=1000 \
   -v /path/to/config:/config \
@@ -41,8 +40,6 @@ services:
     image: ghcr.io/daemonless/unifi:latest
     container_name: unifi
     network_mode: host
-    annotations:
-      org.freebsd.jail.allow.mlock: "true"
     environment:
       - PUID=1000
       - PGID=1000
@@ -96,10 +93,7 @@ Requires `SYSTEM_IP` env var so devices know where to connect. L2 discovery won'
 ## Notes
 
 - **User:** `unifi` (MongoDB runs as root due to restrictions)
-- **Base:** Built on `ghcr.io/daemonless/base-image` (FreeBSD)
-
-### Specific Requirements
-- **MongoDB:** Requires `--annotation 'org.freebsd.jail.allow.mlock=true'` (Requires [patched ocijail](https://github.com/daemonless/daemonless#ocijail-patch))
+- **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)
 
 ## Links
 
