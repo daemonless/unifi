@@ -35,7 +35,7 @@ RUN pkg update && \
 RUN mkdir -p /usr/local/share/java/unifi && \
     API_RESPONSE=$(fetch -qo - "${UPSTREAM_URL}") && \
     UNIFI_VERSION=$(echo "$API_RESPONSE" | sed -n "${UPSTREAM_SED}" | head -1) && \
-    UNIFI_URL=$(echo "$API_RESPONSE" | sed -n 's/.*"href":"\([^"]*\/data\)".*/\1/p' | head -1) && \
+    UNIFI_URL=$(echo "$API_RESPONSE" | sed -n 's/.*"platform":"unix"[^}]*"href":"\([^"]*\)".*/\1\/data/p' | head -1) && \
     echo "Downloading UniFi ${UNIFI_VERSION} from ${UNIFI_URL}..." && \
     fetch -qo - "${UNIFI_URL}" | tar -xzf - -C /usr/local/share/java/unifi --strip-components=1 && \
     echo "${UNIFI_VERSION}" > /usr/local/share/java/unifi/version.txt && \
