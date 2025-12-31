@@ -3,6 +3,8 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
+ARG UPSTREAM_URL="https://fw-update.ui.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release"
+ARG UPSTREAM_SED="s/.*\"version\":\"v\\([^+]*\\).*/\\1/p"
 
 LABEL org.opencontainers.image.title="UniFi" \
     org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
@@ -16,7 +18,8 @@ LABEL org.opencontainers.image.title="UniFi" \
     io.daemonless.arch="${FREEBSD_ARCH}" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Utilities" \
-    io.daemonless.upstream-mode="ubiquiti" \
+    io.daemonless.upstream-url="${UPSTREAM_URL}" \
+    io.daemonless.upstream-sed="${UPSTREAM_SED}" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install dependencies (OpenJDK 17, MongoDB 7.0)
@@ -28,12 +31,12 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install UniFi from Ubiquiti
+# Single fetch - uses same URL/sed as labels for version, extracts download URL
 RUN mkdir -p /usr/local/share/java/unifi && \
-    UNIFI_URL=$(fetch -qo - "https://fw-update.ubnt.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~platform~~unix&filter=eq~~channel~~release" | \
-    sed -n 's/.*"href":"\([^"]*\/data\)".*/\1/p' | sed -n '1p') && \
-    UNIFI_VERSION=$(fetch -qo - "https://fw-update.ubnt.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~platform~~unix&filter=eq~~channel~~release" | \
-    sed -n 's/.*"version":"v\([^+]*\).*/\1/p' | sed -n '1p') && \
-    echo "Downloading UniFi ${UNIFI_VERSION}..." && \
+    API_RESPONSE=$(fetch -qo - "${UPSTREAM_URL}") && \
+    UNIFI_VERSION=$(echo "$API_RESPONSE" | sed -n "${UPSTREAM_SED}" | head -1) && \
+    UNIFI_URL=$(echo "$API_RESPONSE" | sed -n 's/.*"href":"\([^"]*\/data\)".*/\1/p' | head -1) && \
+    echo "Downloading UniFi ${UNIFI_VERSION} from ${UNIFI_URL}..." && \
     fetch -qo - "${UNIFI_URL}" | tar -xzf - -C /usr/local/share/java/unifi --strip-components=1 && \
     echo "${UNIFI_VERSION}" > /usr/local/share/java/unifi/version.txt && \
     mkdir -p /app && echo "${UNIFI_VERSION}" > /app/version
