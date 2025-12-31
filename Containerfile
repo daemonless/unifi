@@ -4,7 +4,7 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
 ARG UPSTREAM_URL="https://fw-update.ui.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release"
-ARG UPSTREAM_SED="s/.*\"version\":\"v\\([^+]*\\).*/\\1/p"
+ARG UPSTREAM_JQ=".[0].version | sub(\"^v\"; \"\") | split(\"+\")[0]"
 
 LABEL org.opencontainers.image.title="UniFi" \
     org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
@@ -19,7 +19,7 @@ LABEL org.opencontainers.image.title="UniFi" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Utilities" \
     io.daemonless.upstream-url="${UPSTREAM_URL}" \
-    io.daemonless.upstream-sed="${UPSTREAM_SED}" \
+    io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install dependencies (OpenJDK 17, MongoDB 7.0)
