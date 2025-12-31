@@ -5,6 +5,9 @@ ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
 ARG UPSTREAM_URL="https://fw-update.ui.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release"
 ARG UPSTREAM_JQ="._embedded.firmware[0].version | sub(\"^v\"; \"\") | split(\"+\")[0]"
+ARG HEALTHCHECK_ENDPOINT="https://localhost:8443/status"
+
+ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
 
 LABEL org.opencontainers.image.title="UniFi" \
     org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
@@ -20,6 +23,7 @@ LABEL org.opencontainers.image.title="UniFi" \
     io.daemonless.category="Utilities" \
     io.daemonless.upstream-url="${UPSTREAM_URL}" \
     io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
+    io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install dependencies (OpenJDK 17, MongoDB 7.0)
@@ -53,7 +57,7 @@ RUN mkdir -p /config /var/run/unifi && \
 COPY root/ /
 
 # Make scripts executable
-RUN chmod +x /etc/services.d/*/run /etc/cont-init.d/* 2>/dev/null || true
+RUN chmod +x /etc/services.d/*/run /etc/cont-init.d/* /healthz 2>/dev/null || true
 
 # Set up s6 service links for unifi and mongodb
 

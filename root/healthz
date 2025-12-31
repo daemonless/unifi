@@ -1,0 +1,7 @@
+#!/bin/sh
+# UniFi health check - HTTPS with self-signed certificate
+
+URL="${HEALTHCHECK_URL:-https://localhost:8443/status}"
+TIMEOUT="${HEALTHCHECK_TIMEOUT:-5}"
+
+exec fetch -qo /dev/null -T "$TIMEOUT" --no-verify-peer "$URL"
