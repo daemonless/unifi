@@ -4,7 +4,7 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
 ARG UPSTREAM_URL="https://fw-update.ui.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release"
-ARG UPSTREAM_JQ=".[0].version | sub(\"^v\"; \"\") | split(\"+\")[0]"
+ARG UPSTREAM_JQ="._embedded.firmware[0].version | sub(\"^v\"; \"\") | split(\"+\")[0]"
 
 LABEL org.opencontainers.image.title="UniFi" \
     org.opencontainers.image.description="UniFi Network Application on FreeBSD" \
