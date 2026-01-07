@@ -4,4 +4,4 @@ cit:
   port: 8443
   health: /status
   https: true
-  wait: 120
+  wait: 240
