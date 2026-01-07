@@ -1,0 +1,5 @@
+icon: ':simple-ubiquiti:'
+cit:
+  mode: screenshot
+  port: 8443
+  health: /status
