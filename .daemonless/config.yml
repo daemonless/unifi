@@ -3,3 +3,4 @@ cit:
   mode: screenshot
   port: 8443
   health: /status
+  https: true
