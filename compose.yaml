@@ -1,0 +1,55 @@
+name: unifi
+
+x-daemonless:
+  title: "UniFi Network"
+  icon: ":material-access-point-network:"
+  category: "Utilities"
+  description: "UniFi Network Application on FreeBSD."
+  upstream_url: "https://ui.com/"
+  web_url: "https://ui.com/"
+  freshports_url: "https://www.freshports.org/net-mgmt/unifi8/"
+  user: "bsd"
+  mlock: true
+  upstream_binary: true
+  
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+    volumes:
+      /config: "Configuration and database directory"
+    ports:
+      8443: "Web UI (HTTPS)"
+      8080: "Device inform"
+      8843: "Guest portal HTTPS"
+      8880: "Guest portal HTTP"
+      6789: "Mobile throughput test"
+      3478: "STUN (UDP)"
+      10001: "Device discovery (UDP)"
+
+services:
+  unifi:
+    image: ghcr.io/daemonless/unifi:latest
+    container_name: unifi
+    restart: unless-stopped
+    
+    annotations:
+      org.freebsd.jail.allow.mlock: "true"
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/unifi:/config
+
+    ports:
+      - "8443:8443"
+      - "8080:8080"
+      - "8843:8843"
+      - "8880:8880"
+      - "6789:6789"
+      - "3478:3478/udp"
+      - "10001:10001/udp"

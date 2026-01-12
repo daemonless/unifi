@@ -4,22 +4,26 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
 ARG UPSTREAM_URL="https://fw-update.ui.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release"
-ARG HEALTHCHECK_ENDPOINT="https://localhost:8443/status"
+ARG HEALTHCHECK_ENDPOINT="https://localhost:{{ ports[0].port }}/status"
 
 ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
 
-LABEL org.opencontainers.image.title="UniFi Network" \
-    org.opencontainers.image.description="UniFi Network Application on FreeBSD." \
-    org.opencontainers.image.source="https://github.com/daemonless/unifi" \
-    org.opencontainers.image.url="https://ui.com/" \
+LABEL org.opencontainers.image.title="{{ title }}" \
+    org.opencontainers.image.description="{{ description }}" \
+    org.opencontainers.image.source="{{ repo_url }}" \
+    org.opencontainers.image.url="{{ web_url }}" \
     org.opencontainers.image.documentation="https://help.ui.com/" \
     org.opencontainers.image.licenses="Proprietary" \
     org.opencontainers.image.vendor="daemonless" \
     org.opencontainers.image.authors="daemonless" \
-    io.daemonless.port="8443" \
+{%- if ports %}
+    io.daemonless.port="{{ ports[0].port }}" \
+{%- endif %}
     io.daemonless.arch="${FREEBSD_ARCH}" \
+{%- if mlock %}
     org.freebsd.jail.allow.mlock="required" \
-    io.daemonless.category="Utilities" \
+{%- endif %}
+    io.daemonless.category="{{ category }}" \
     io.daemonless.upstream-url="${UPSTREAM_URL}" \
     io.daemonless.upstream-jq='._embedded.firmware[0].version | sub("^v"; "") | split("+")[0]' \
     io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
@@ -68,5 +72,9 @@ RUN chmod +x /etc/services.d/*/run /etc/cont-init.d/* /healthz 2>/dev/null || tr
 # 6789  - Mobile throughput test
 # 3478/udp - STUN
 # 10001/udp - Device discovery
-EXPOSE 8443 8080 8843 8880 6789 3478 10001
-VOLUME /config
+{%- if ports %}
+EXPOSE {{ ports | map(attribute='port') | join(' ') }}
+{%- endif %}
+{%- if volumes %}
+VOLUME {{ volumes | map(attribute='path') | join(' ') }}
+{%- endif %}

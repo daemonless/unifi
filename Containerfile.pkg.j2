@@ -3,18 +3,22 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=unifi10
-LABEL org.opencontainers.image.title="UniFi Network" \
-      org.opencontainers.image.description="UniFi Network Application on FreeBSD." \
-      org.opencontainers.image.source="https://github.com/daemonless/unifi" \
-      org.opencontainers.image.url="https://ui.com/" \
+LABEL org.opencontainers.image.title="{{ title }}" \
+      org.opencontainers.image.description="{{ description }}" \
+      org.opencontainers.image.source="{{ repo_url }}" \
+      org.opencontainers.image.url="{{ web_url }}" \
       org.opencontainers.image.documentation="https://help.ui.com/" \
       org.opencontainers.image.licenses="Proprietary" \
       org.opencontainers.image.vendor="daemonless" \
       org.opencontainers.image.authors="daemonless" \
-      io.daemonless.port="8443" \
+{%- if ports %}
+      io.daemonless.port="{{ ports[0].port }}" \
+{%- endif %}
       io.daemonless.arch="${FREEBSD_ARCH}" \
       io.daemonless.pkg-name="${PKG_NAME}" \
+{%- if mlock %}
       org.freebsd.jail.allow.mlock="required"
+{%- endif %}
 
 # Install from FreeBSD packages
 RUN pkg update && \
@@ -50,5 +54,9 @@ RUN mkdir -p /run/s6/services/unifi /run/s6/services/mongodb && \
 # 6789  - Mobile throughput test
 # 3478/udp - STUN
 # 10001/udp - Device discovery
-EXPOSE 8443 8080 8843 8880 6789 3478 10001
-VOLUME /config
+{%- if ports %}
+EXPOSE {{ ports | map(attribute='port') | join(' ') }}
+{%- endif %}
+{%- if volumes %}
+VOLUME {{ volumes | map(attribute='path') | join(' ') }}
+{%- endif %}
