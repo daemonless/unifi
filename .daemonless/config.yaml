@@ -2,7 +2,7 @@ icon: ':simple-ubiquiti:'
 cit:
   mode: screenshot
   port: 8443
-  health: /status
+  health: /manage
   https: true
   wait: 300
   annotations:
