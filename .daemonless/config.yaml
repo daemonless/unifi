@@ -4,4 +4,6 @@ cit:
   port: 8443
   health: /status
   https: true
-  wait: 240
+  wait: 300
+  annotations:
+    - org.freebsd.jail.allow.mlock=true
