@@ -11,6 +11,7 @@ UniFi Network Application on FreeBSD.
 |---|---|
 | **Port** | 8443 |
 | **Registry** | `ghcr.io/daemonless/unifi` |
+| **Docs** | [daemonless.io/images/unifi](https://daemonless.io/images/unifi/) |
 | **Source** | [https://ui.com/](https://ui.com/) |
 | **Website** | [https://ui.com/](https://ui.com/) |
 
