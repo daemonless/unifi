@@ -1,11 +1,11 @@
 {
   "image": "unifi",
-  "generated": "2026-02-01T22:50:31Z",
+  "generated": "2026-02-02T13:56:01Z",
   "tags": {
     "latest": {
       "app_version": "10.0.162",
       "source": "upstream-binary",
-      "generated": "2026-02-01T22:50:13Z",
+      "generated": "2026-02-02T13:45:05Z",
       "packages": {
         "freebsd": [
           {
@@ -426,7 +426,7 @@
     "pkg-latest": {
       "app_version": "10.0.160",
       "source": "freebsd-latest",
-      "generated": "2026-02-01T22:42:31Z",
+      "generated": "2026-02-02T13:54:24Z",
       "packages": {
         "freebsd": [
           {
@@ -615,7 +615,7 @@
           },
           {
             "name": "harfbuzz",
-            "version": "12.3.0"
+            "version": "12.3.2"
           },
           {
             "name": "indexinfo",
@@ -639,7 +639,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.17"
+            "version": "2.18"
           },
           {
             "name": "lerc",
@@ -767,7 +767,7 @@
           },
           {
             "name": "png",
-            "version": "1.6.53"
+            "version": "1.6.54"
           },
           {
             "name": "py311-packaging",
@@ -847,7 +847,7 @@
     "pkg": {
       "app_version": "10.0.160",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-01T22:42:01Z",
+      "generated": "2026-02-02T13:55:50Z",
       "packages": {
         "freebsd": [
           {
