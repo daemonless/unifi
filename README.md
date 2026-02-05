@@ -117,6 +117,7 @@ Access at: `http://localhost:8443`
 
 ## Notes
 
+- **Architectures:** amd64
 - **User:** `bsd` (UID/GID set via PUID/PGID)
 - **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)
 - **.NET App:** Requires `--annotation 'org.freebsd.jail.allow.mlock=true'` and a [patched ocijail](https://daemonless.io/guides/ocijail-patch).
