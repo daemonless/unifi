@@ -1,11 +1,12 @@
 {
   "image": "unifi",
-  "generated": "2026-02-02T13:56:01Z",
+  "generated": "2026-02-06T00:31:12Z",
   "tags": {
     "latest": {
+      "arch": "amd64",
       "app_version": "10.0.162",
       "source": "upstream-binary",
-      "generated": "2026-02-02T13:45:05Z",
+      "generated": "2026-02-06T00:18:34Z",
       "packages": {
         "freebsd": [
           {
@@ -410,23 +411,33 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "python": [
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "packaging",
+            "version": "25.0"
+          }
+        ],
         "node": [],
         "go": []
       },
       "summary": {
         "freebsd": 100,
         "dotnet": 0,
-        "python": 0,
+        "python": 2,
         "node": 0,
         "go": 0,
-        "total": 100
+        "total": 102
       }
     },
     "pkg-latest": {
+      "arch": "amd64",
       "app_version": "10.0.160",
       "source": "freebsd-latest",
-      "generated": "2026-02-02T13:54:24Z",
+      "generated": "2026-02-06T00:17:25Z",
       "packages": {
         "freebsd": [
           {
@@ -831,23 +842,33 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "python": [
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "packaging",
+            "version": "25.0"
+          }
+        ],
         "node": [],
         "go": []
       },
       "summary": {
         "freebsd": 100,
         "dotnet": 0,
-        "python": 0,
+        "python": 2,
         "node": 0,
         "go": 0,
-        "total": 100
+        "total": 102
       }
     },
     "pkg": {
+      "arch": "amd64",
       "app_version": "10.0.160",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-02T13:55:50Z",
+      "generated": "2026-02-06T00:31:01Z",
       "packages": {
         "freebsd": [
           {
@@ -1252,17 +1273,26 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "python": [
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "packaging",
+            "version": "25.0"
+          }
+        ],
         "node": [],
         "go": []
       },
       "summary": {
         "freebsd": 100,
         "dotnet": 0,
-        "python": 0,
+        "python": 2,
         "node": 0,
         "go": 0,
-        "total": 100
+        "total": 102
       }
     }
   }
