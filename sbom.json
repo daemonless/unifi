@@ -1,12 +1,12 @@
 {
   "image": "unifi",
-  "generated": "2026-02-10T11:03:50Z",
+  "generated": "2026-02-12T22:19:58Z",
   "tags": {
     "latest": {
       "arch": "amd64",
-      "app_version": "10.1.84",
+      "app_version": "10.1.85",
       "source": "upstream-binary",
-      "generated": "2026-02-10T11:02:13Z",
+      "generated": "2026-02-12T22:19:38Z",
       "packages": {
         "freebsd": [
           {
@@ -1038,7 +1038,7 @@
       "arch": "amd64",
       "app_version": "10.0.160",
       "source": "freebsd-latest",
-      "generated": "2026-02-10T11:02:30Z",
+      "generated": "2026-02-12T22:19:05Z",
       "packages": {
         "freebsd": [
           {
@@ -1187,7 +1187,7 @@
           },
           {
             "name": "expat",
-            "version": "2.7.3"
+            "version": "2.7.4"
           },
           {
             "name": "font-bh-ttf",
@@ -1367,7 +1367,7 @@
           },
           {
             "name": "openjdk17",
-            "version": "17.0.17+10.1_2"
+            "version": "17.0.18+8.1"
           },
           {
             "name": "pcre2",
@@ -2070,7 +2070,7 @@
       "arch": "amd64",
       "app_version": "10.0.160",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-10T11:03:39Z",
+      "generated": "2026-02-12T22:19:42Z",
       "packages": {
         "freebsd": [
           {
