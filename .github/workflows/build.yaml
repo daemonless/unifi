@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    uses: daemonless/daemonless/.github/workflows/build-app.yaml@main
+    uses: daemonless/dbuild/.github/workflows/daemonless-build.yaml@main
     with:
       image_name: unifi
     secrets: inherit
