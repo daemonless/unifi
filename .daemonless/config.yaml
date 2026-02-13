@@ -6,3 +6,15 @@ cit:
   wait: 300
   annotations:
     - org.freebsd.jail.allow.mlock=true
+
+build:
+  variants:
+    - tag: latest
+      containerfile: Containerfile
+      default: true
+    - tag: pkg
+      containerfile: Containerfile.pkg
+    - tag: pkg-latest
+      containerfile: Containerfile.pkg
+      args:
+        BASE_VERSION: "15-latest"
