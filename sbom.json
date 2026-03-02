@@ -1,12 +1,12 @@
 {
   "image": "unifi",
-  "generated": "2026-02-16T09:05:58Z",
+  "generated": "2026-03-02T22:14:50Z",
   "tags": {
     "latest": {
       "arch": "amd64",
       "app_version": "10.1.85",
       "source": "upstream",
-      "generated": "2026-02-16T09:05:42Z",
+      "generated": "2026-03-02T22:14:33Z",
       "packages": {
         "freebsd": [
           {
@@ -1036,9 +1036,9 @@
     },
     "pkg-latest": {
       "arch": "amd64",
-      "app_version": "10.1.84",
+      "app_version": "10.1.85",
       "source": "pkg",
-      "generated": "2026-02-16T09:03:56Z",
+      "generated": "2026-03-02T22:13:22Z",
       "packages": {
         "freebsd": [
           {
@@ -1159,7 +1159,7 @@
           },
           {
             "name": "alsa-lib",
-            "version": "1.2.14"
+            "version": "1.2.15.3"
           },
           {
             "name": "brotli",
@@ -1235,7 +1235,7 @@
           },
           {
             "name": "javavmwrapper",
-            "version": "2.7.10"
+            "version": "2.7.10_1"
           },
           {
             "name": "jbigkit",
@@ -1339,7 +1339,7 @@
           },
           {
             "name": "libunistring",
-            "version": "1.4.1"
+            "version": "1.4.2"
           },
           {
             "name": "libunwind",
@@ -1379,7 +1379,7 @@
           },
           {
             "name": "png",
-            "version": "1.6.54"
+            "version": "1.6.55"
           },
           {
             "name": "py311-packaging",
@@ -1411,7 +1411,7 @@
           },
           {
             "name": "snappyjava",
-            "version": "1.1.10.8"
+            "version": "1.1.10.8_1"
           },
           {
             "name": "snowballstemmer",
@@ -1423,7 +1423,7 @@
           },
           {
             "name": "unifi10",
-            "version": "10.1.84"
+            "version": "10.1.85"
           },
           {
             "name": "xorg-fonts-truetype",
@@ -2023,7 +2023,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "HEAD-20260212-0508"
+            "version": "HEAD-20260228-0308"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -2074,7 +2074,7 @@
       "arch": "amd64",
       "app_version": "10.0.160",
       "source": "pkg",
-      "generated": "2026-02-16T09:05:38Z",
+      "generated": "2026-03-02T22:13:21Z",
       "packages": {
         "freebsd": [
           {
@@ -3055,7 +3055,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "HEAD-20260212-1031"
+            "version": "HEAD-20260226-1022"
           },
           {
             "name": "org.yaml:snakeyaml",
