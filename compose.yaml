@@ -7,7 +7,7 @@ x-daemonless:
   description: "UniFi Network Application on FreeBSD."
   upstream_url: "https://ui.com/"
   web_url: "https://ui.com/"
-  freshports_url: "https://www.freshports.org/net-mgmt/unifi8/"
+  freshports_url: "https://www.freshports.org/net-mgmt/unifi10/"
   user: "bsd"
   mlock: true
   upstream_binary: true
