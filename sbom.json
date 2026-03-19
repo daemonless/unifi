@@ -1,12 +1,12 @@
 {
   "image": "unifi",
-  "generated": "2026-03-14T10:50:02Z",
+  "generated": "2026-03-19T08:37:58Z",
   "tags": {
     "latest": {
       "arch": "amd64",
-      "app_version": "10.1.85",
+      "app_version": "10.1.89",
       "source": "upstream",
-      "generated": "2026-03-14T10:46:51Z",
+      "generated": "2026-03-19T08:37:40Z",
       "packages": {
         "freebsd": [
           {
@@ -1038,7 +1038,7 @@
       "arch": "amd64",
       "app_version": "10.1.85",
       "source": "pkg",
-      "generated": "2026-03-14T10:49:49Z",
+      "generated": "2026-03-19T08:37:05Z",
       "packages": {
         "freebsd": [
           {
@@ -1183,7 +1183,7 @@
           },
           {
             "name": "execline",
-            "version": "2.9.7.0"
+            "version": "2.9.8.1"
           },
           {
             "name": "expat",
@@ -1227,7 +1227,7 @@
           },
           {
             "name": "harfbuzz",
-            "version": "12.3.2"
+            "version": "13.0.1"
           },
           {
             "name": "indexinfo",
@@ -1267,7 +1267,7 @@
           },
           {
             "name": "libX11",
-            "version": "1.8.12,1"
+            "version": "1.8.13,1"
           },
           {
             "name": "libXau",
@@ -1375,7 +1375,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.6.2"
+            "version": "2.6.2_1"
           },
           {
             "name": "png",
@@ -1395,15 +1395,15 @@
           },
           {
             "name": "s6",
-            "version": "2.13.2.0"
+            "version": "2.14.0.1"
           },
           {
             "name": "s6-rc",
-            "version": "0.5.6.0"
+            "version": "0.6.0.0"
           },
           {
             "name": "skalibs",
-            "version": "2.14.4.0"
+            "version": "2.14.5.1"
           },
           {
             "name": "snappy",
@@ -2074,7 +2074,7 @@
       "arch": "amd64",
       "app_version": "10.0.160",
       "source": "pkg",
-      "generated": "2026-03-14T10:48:03Z",
+      "generated": "2026-03-19T08:37:43Z",
       "packages": {
         "freebsd": [
           {
