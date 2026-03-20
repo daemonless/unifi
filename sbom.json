@@ -1,12 +1,12 @@
 {
   "image": "unifi",
-  "generated": "2026-03-19T08:37:58Z",
+  "generated": "2026-03-20T11:10:47Z",
   "tags": {
     "latest": {
       "arch": "amd64",
       "app_version": "10.1.89",
       "source": "upstream",
-      "generated": "2026-03-19T08:37:40Z",
+      "generated": "2026-03-20T11:09:25Z",
       "packages": {
         "freebsd": [
           {
@@ -1038,7 +1038,7 @@
       "arch": "amd64",
       "app_version": "10.1.85",
       "source": "pkg",
-      "generated": "2026-03-19T08:37:05Z",
+      "generated": "2026-03-20T11:10:35Z",
       "packages": {
         "freebsd": [
           {
@@ -2074,7 +2074,7 @@
       "arch": "amd64",
       "app_version": "10.0.160",
       "source": "pkg",
-      "generated": "2026-03-19T08:37:43Z",
+      "generated": "2026-03-20T11:07:59Z",
       "packages": {
         "freebsd": [
           {
