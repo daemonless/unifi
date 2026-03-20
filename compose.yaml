@@ -4,14 +4,15 @@ x-daemonless:
   title: "UniFi Network"
   icon: ":material-access-point-network:"
   category: "Utilities"
-  description: "UniFi Network Application on FreeBSD."
+  description: "Ubiquiti UniFi Network Application for managing UniFi access points, switches, and gateways."
   upstream_url: "https://ui.com/"
   web_url: "https://ui.com/"
   freshports_url: "https://www.freshports.org/net-mgmt/unifi10/"
   user: "bsd"
   mlock: true
   upstream_binary: true
-  
+  appjail: true
+
   docs:
     env:
       PUID: "User ID for the application process"

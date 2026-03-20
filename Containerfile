@@ -15,7 +15,7 @@ ARG HEALTHCHECK_ENDPOINT="https://localhost:8443/status"
 ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
 
 LABEL org.opencontainers.image.title="UniFi Network" \
-    org.opencontainers.image.description="UniFi Network Application on FreeBSD." \
+    org.opencontainers.image.description="Ubiquiti UniFi Network Application for managing UniFi access points, switches, and gateways." \
     org.opencontainers.image.source="https://github.com/daemonless/unifi" \
     org.opencontainers.image.url="https://ui.com/" \
     org.opencontainers.image.documentation="https://help.ui.com/" \

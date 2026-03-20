@@ -10,7 +10,7 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=unifi10
 LABEL org.opencontainers.image.title="UniFi Network" \
-      org.opencontainers.image.description="UniFi Network Application on FreeBSD." \
+      org.opencontainers.image.description="Ubiquiti UniFi Network Application for managing UniFi access points, switches, and gateways." \
       org.opencontainers.image.source="https://github.com/daemonless/unifi" \
       org.opencontainers.image.url="https://ui.com/" \
       org.opencontainers.image.documentation="https://help.ui.com/" \
