@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-05T19:41:10Z",
+  "generated": "2026-04-16T18:33:29Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-04-05T19:39:37Z",
+      "generated": "2026-04-16T18:31:15Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -127,7 +127,7 @@
           },
           {
             "name": "alsa-lib",
-            "version": "1.2.14"
+            "version": "1.2.15.3"
           },
           {
             "name": "brotli",
@@ -139,7 +139,7 @@
           },
           {
             "name": "curl",
-            "version": "8.17.0"
+            "version": "8.19.0_1"
           },
           {
             "name": "cyrus-sasl",
@@ -147,7 +147,7 @@
           },
           {
             "name": "dejavu",
-            "version": "2.37_3"
+            "version": "2.37_4"
           },
           {
             "name": "encodings",
@@ -155,11 +155,11 @@
           },
           {
             "name": "execline",
-            "version": "2.9.7.0"
+            "version": "2.9.8.1"
           },
           {
             "name": "expat",
-            "version": "2.7.4"
+            "version": "2.7.5"
           },
           {
             "name": "font-bh-ttf",
@@ -179,11 +179,11 @@
           },
           {
             "name": "freetype2",
-            "version": "2.14.1"
+            "version": "2.14.3"
           },
           {
             "name": "gettext-runtime",
-            "version": "0.26"
+            "version": "1.0"
           },
           {
             "name": "giflib",
@@ -199,7 +199,7 @@
           },
           {
             "name": "harfbuzz",
-            "version": "12.3.0"
+            "version": "13.2.1"
           },
           {
             "name": "indexinfo",
@@ -207,7 +207,7 @@
           },
           {
             "name": "javavmwrapper",
-            "version": "2.7.10"
+            "version": "2.7.10_1"
           },
           {
             "name": "jbigkit",
@@ -215,7 +215,7 @@
           },
           {
             "name": "jpeg-turbo",
-            "version": "3.1.3"
+            "version": "3.1.4.1"
           },
           {
             "name": "jq",
@@ -223,7 +223,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.17"
+            "version": "2.18"
           },
           {
             "name": "lerc",
@@ -239,7 +239,7 @@
           },
           {
             "name": "libX11",
-            "version": "1.8.12,1"
+            "version": "1.8.13,1"
           },
           {
             "name": "libXau",
@@ -287,7 +287,7 @@
           },
           {
             "name": "libfontenc",
-            "version": "1.1.8"
+            "version": "1.1.9"
           },
           {
             "name": "libiconv",
@@ -311,7 +311,7 @@
           },
           {
             "name": "libunistring",
-            "version": "1.4.1"
+            "version": "1.4.2"
           },
           {
             "name": "libunwind",
@@ -327,7 +327,7 @@
           },
           {
             "name": "mongodb70",
-            "version": "7.0.28"
+            "version": "7.0.31_2"
           },
           {
             "name": "mpdecimal",
@@ -339,7 +339,7 @@
           },
           {
             "name": "openjdk17",
-            "version": "17.0.17+10.1"
+            "version": "17.0.18+8.1"
           },
           {
             "name": "pcre2",
@@ -347,19 +347,19 @@
           },
           {
             "name": "pkg",
-            "version": "2.5.1"
+            "version": "2.6.2_1"
           },
           {
             "name": "png",
-            "version": "1.6.53"
+            "version": "1.6.57"
           },
           {
             "name": "py311-packaging",
-            "version": "25.0"
+            "version": "26.0"
           },
           {
             "name": "python311",
-            "version": "3.11.15"
+            "version": "3.11.15_2"
           },
           {
             "name": "readline",
@@ -367,11 +367,11 @@
           },
           {
             "name": "s6",
-            "version": "2.13.2.0"
+            "version": "2.14.0.1"
           },
           {
             "name": "skalibs",
-            "version": "2.14.4.0"
+            "version": "2.14.5.1"
           },
           {
             "name": "snappy",
@@ -379,7 +379,7 @@
           },
           {
             "name": "snappyjava",
-            "version": "1.1.10.8"
+            "version": "1.1.10.8_1"
           },
           {
             "name": "snowballstemmer",
@@ -387,7 +387,7 @@
           },
           {
             "name": "tiff",
-            "version": "4.7.1"
+            "version": "4.7.1_1"
           },
           {
             "name": "xorg-fonts-truetype",
@@ -399,7 +399,7 @@
           },
           {
             "name": "yaml-cpp",
-            "version": "0.8.0"
+            "version": "0.9.0"
           },
           {
             "name": "zstd",
@@ -1010,7 +1010,7 @@
           },
           {
             "name": "packaging",
-            "version": "25.0"
+            "version": "26.0"
           }
         ],
         "ruby": [],
@@ -1033,7 +1033,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-04-05T19:39:58Z",
+      "generated": "2026-04-16T18:32:14Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1155,7 +1155,7 @@
           },
           {
             "name": "alsa-lib",
-            "version": "1.2.14"
+            "version": "1.2.15.3"
           },
           {
             "name": "brotli",
@@ -1167,7 +1167,7 @@
           },
           {
             "name": "curl",
-            "version": "8.17.0"
+            "version": "8.19.0_1"
           },
           {
             "name": "cyrus-sasl",
@@ -1175,7 +1175,7 @@
           },
           {
             "name": "dejavu",
-            "version": "2.37_3"
+            "version": "2.37_4"
           },
           {
             "name": "encodings",
@@ -1183,11 +1183,11 @@
           },
           {
             "name": "execline",
-            "version": "2.9.7.0"
+            "version": "2.9.8.1"
           },
           {
             "name": "expat",
-            "version": "2.7.4"
+            "version": "2.7.5"
           },
           {
             "name": "font-bh-ttf",
@@ -1207,11 +1207,11 @@
           },
           {
             "name": "freetype2",
-            "version": "2.14.1"
+            "version": "2.14.3"
           },
           {
             "name": "gettext-runtime",
-            "version": "0.26"
+            "version": "1.0"
           },
           {
             "name": "giflib",
@@ -1227,7 +1227,7 @@
           },
           {
             "name": "harfbuzz",
-            "version": "12.3.0"
+            "version": "13.2.1"
           },
           {
             "name": "indexinfo",
@@ -1235,7 +1235,7 @@
           },
           {
             "name": "javavmwrapper",
-            "version": "2.7.10"
+            "version": "2.7.10_1"
           },
           {
             "name": "jbigkit",
@@ -1243,7 +1243,7 @@
           },
           {
             "name": "jpeg-turbo",
-            "version": "3.1.3"
+            "version": "3.1.4.1"
           },
           {
             "name": "jq",
@@ -1251,7 +1251,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.17"
+            "version": "2.18"
           },
           {
             "name": "lerc",
@@ -1267,7 +1267,7 @@
           },
           {
             "name": "libX11",
-            "version": "1.8.12,1"
+            "version": "1.8.13,1"
           },
           {
             "name": "libXau",
@@ -1315,7 +1315,7 @@
           },
           {
             "name": "libfontenc",
-            "version": "1.1.8"
+            "version": "1.1.9"
           },
           {
             "name": "libiconv",
@@ -1339,7 +1339,7 @@
           },
           {
             "name": "libunistring",
-            "version": "1.4.1"
+            "version": "1.4.2"
           },
           {
             "name": "libunwind",
@@ -1355,7 +1355,7 @@
           },
           {
             "name": "mongodb70",
-            "version": "7.0.28"
+            "version": "7.0.31_2"
           },
           {
             "name": "mpdecimal",
@@ -1367,7 +1367,7 @@
           },
           {
             "name": "openjdk17",
-            "version": "17.0.17+10.1"
+            "version": "17.0.18+8.1"
           },
           {
             "name": "pcre2",
@@ -1375,19 +1375,19 @@
           },
           {
             "name": "pkg",
-            "version": "2.5.1"
+            "version": "2.6.2_1"
           },
           {
             "name": "png",
-            "version": "1.6.53"
+            "version": "1.6.57"
           },
           {
             "name": "py311-packaging",
-            "version": "25.0"
+            "version": "26.0"
           },
           {
             "name": "python311",
-            "version": "3.11.15"
+            "version": "3.11.15_2"
           },
           {
             "name": "readline",
@@ -1395,11 +1395,11 @@
           },
           {
             "name": "s6",
-            "version": "2.13.2.0"
+            "version": "2.14.0.1"
           },
           {
             "name": "skalibs",
-            "version": "2.14.4.0"
+            "version": "2.14.5.1"
           },
           {
             "name": "snappy",
@@ -1407,7 +1407,7 @@
           },
           {
             "name": "snappyjava",
-            "version": "1.1.10.8"
+            "version": "1.1.10.8_1"
           },
           {
             "name": "snowballstemmer",
@@ -1415,7 +1415,7 @@
           },
           {
             "name": "tiff",
-            "version": "4.7.1"
+            "version": "4.7.1_1"
           },
           {
             "name": "unifi10",
@@ -1431,7 +1431,7 @@
           },
           {
             "name": "yaml-cpp",
-            "version": "0.8.0"
+            "version": "0.9.0"
           },
           {
             "name": "zstd",
@@ -2018,7 +2018,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "HEAD-20260328-1009"
+            "version": "HEAD-20260404-0500"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -2046,7 +2046,7 @@
           },
           {
             "name": "packaging",
-            "version": "25.0"
+            "version": "26.0"
           }
         ],
         "ruby": [],
@@ -2069,7 +2069,7 @@
     "pkg-latest": {
       "app_version": "10.1.89_1",
       "arch": "amd64",
-      "generated": "2026-04-05T19:39:30Z",
+      "generated": "2026-04-16T18:31:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2203,7 +2203,7 @@
           },
           {
             "name": "curl",
-            "version": "8.19.0_1"
+            "version": "8.19.0_2"
           },
           {
             "name": "cyrus-sasl",
@@ -2279,7 +2279,7 @@
           },
           {
             "name": "jpeg-turbo",
-            "version": "3.1.3"
+            "version": "3.1.4.1"
           },
           {
             "name": "jq",
@@ -2291,7 +2291,7 @@
           },
           {
             "name": "lerc",
-            "version": "4.0.0"
+            "version": "4.1.0"
           },
           {
             "name": "libICE",
@@ -2363,7 +2363,7 @@
           },
           {
             "name": "libnghttp2",
-            "version": "1.68.0"
+            "version": "1.68.1"
           },
           {
             "name": "libpsl",
@@ -2411,11 +2411,11 @@
           },
           {
             "name": "pkg",
-            "version": "2.6.2_1"
+            "version": "2.7.0"
           },
           {
             "name": "png",
-            "version": "1.6.55"
+            "version": "1.6.57"
           },
           {
             "name": "py311-packaging",
@@ -2423,7 +2423,7 @@
           },
           {
             "name": "python311",
-            "version": "3.11.15_1"
+            "version": "3.11.15_2"
           },
           {
             "name": "readline",
@@ -2451,7 +2451,7 @@
           },
           {
             "name": "tiff",
-            "version": "4.7.1"
+            "version": "4.7.1_1"
           },
           {
             "name": "unifi10",
