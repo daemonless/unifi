@@ -7,9 +7,9 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/unifi/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/unifi/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/unifi?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/unifi/commits)
+[![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Ubiquiti UniFi Network Application for managing UniFi access points, switches, and gateways.
-
 
 | | |
 |---|---|
@@ -26,11 +26,14 @@ Ubiquiti UniFi Network Application for managing UniFi access points, switches, a
 | `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
+
 ## Prerequisites
 
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
+
 ## Deployment
+
 
 ### Podman Compose
 
@@ -149,7 +152,6 @@ podman run -d --name unifi \
       org.freebsd.jail.allow.mlock: "true"
 ```
 
-Access at: `http://localhost:8443`
 
 ## Parameters
 

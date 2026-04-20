@@ -2,7 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
-ARG PACKAGES="openjdk17 mongodb70 snappyjava ca_root_nss"
+ARG PACKAGES="openjdk25-jre-headless mongodb70 snappyjava ca_root_nss"
 ARG UPSTREAM_URL="https://fw-update.ui.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release"
 ARG HEALTHCHECK_ENDPOINT="https://localhost:{{ ports[0].port }}/status"
 
@@ -29,7 +29,7 @@ LABEL org.opencontainers.image.title="{{ title }}" \
     io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
     io.daemonless.packages="${PACKAGES}"
 
-# Install dependencies (OpenJDK 17, MongoDB 7.0)
+# Install dependencies (OpenJDK 25 JRE headless, MongoDB 7.0)
 # snappyjava provides native FreeBSD snappy library (avoids bundled Linux lib)
 RUN pkg update && \
     pkg install -y \
