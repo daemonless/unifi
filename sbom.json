@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-20T22:38:02Z",
+  "generated": "2026-04-28T16:55:16Z",
   "image": "unifi",
   "tags": {
     "latest": {
-      "app_version": "10.3.55",
+      "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-04-20T22:35:57Z",
+      "generated": "2026-04-28T16:53:57Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -79,11 +79,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -95,7 +95,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -275,7 +275,7 @@
           },
           {
             "name": "libnghttp2",
-            "version": "1.68.0"
+            "version": "1.68.1"
           },
           {
             "name": "libpsl",
@@ -382,11 +382,11 @@
           },
           {
             "name": "ch.qos.logback.access:logback-access-common",
-            "version": "2.0.6"
+            "version": "2.0.12"
           },
           {
             "name": "ch.qos.logback.access:logback-access-tomcat",
-            "version": "2.0.6"
+            "version": "2.0.12"
           },
           {
             "name": "ch.qos.logback:logback-classic",
@@ -1029,7 +1029,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-04-20T22:35:59Z",
+      "generated": "2026-04-28T16:52:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1103,11 +1103,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -1119,7 +1119,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1323,7 +1323,7 @@
           },
           {
             "name": "libnghttp2",
-            "version": "1.68.0"
+            "version": "1.68.1"
           },
           {
             "name": "libpsl",
@@ -2014,7 +2014,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "HEAD-20260404-0500"
+            "version": "HEAD-20260423-0536"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -2065,7 +2065,7 @@
     "pkg-latest": {
       "app_version": "10.1.89_1",
       "arch": "amd64",
-      "generated": "2026-04-20T22:36:52Z",
+      "generated": "2026-04-28T16:53:30Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2139,11 +2139,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -2155,7 +2155,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -2359,7 +2359,7 @@
           },
           {
             "name": "libnghttp2",
-            "version": "1.68.1"
+            "version": "1.69.0"
           },
           {
             "name": "libpsl",
@@ -2411,7 +2411,7 @@
           },
           {
             "name": "png",
-            "version": "1.6.57"
+            "version": "1.6.58"
           },
           {
             "name": "py311-packaging",
@@ -3050,7 +3050,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "HEAD-20260405-0107"
+            "version": "HEAD-20260424-0907"
           },
           {
             "name": "org.yaml:snakeyaml",
