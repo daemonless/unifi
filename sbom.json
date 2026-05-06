@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-03T15:55:20Z",
+  "generated": "2026-05-06T23:39:45Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-05-03T15:52:19Z",
+      "generated": "2026-05-06T23:38:26Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -95,7 +95,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -123,7 +123,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "alsa-lib",
@@ -1029,7 +1029,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-05-03T15:54:02Z",
+      "generated": "2026-05-06T23:38:36Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1119,7 +1119,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1147,7 +1147,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "alsa-lib",
@@ -2014,7 +2014,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "HEAD-20260423-0536"
+            "version": "HEAD-20260502-0542"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -2065,7 +2065,7 @@
     "pkg-latest": {
       "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-05-03T15:53:01Z",
+      "generated": "2026-05-06T23:38:32Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2155,7 +2155,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p6"
+            "version": "15.0p8"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -2183,7 +2183,7 @@
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0"
+            "version": "15.0p7"
           },
           {
             "name": "alsa-lib",
@@ -2199,7 +2199,7 @@
           },
           {
             "name": "curl",
-            "version": "8.19.0_2"
+            "version": "8.20.0"
           },
           {
             "name": "cyrus-sasl",
@@ -2251,7 +2251,7 @@
           },
           {
             "name": "glib",
-            "version": "2.84.4,2"
+            "version": "2.86.4,2"
           },
           {
             "name": "graphite2",
@@ -2459,7 +2459,7 @@
           },
           {
             "name": "xorgproto",
-            "version": "2024.1"
+            "version": "2025.1"
           },
           {
             "name": "yaml-cpp",
