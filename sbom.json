@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-06T23:39:45Z",
+  "generated": "2026-05-15T23:11:24Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-05-06T23:38:26Z",
+      "generated": "2026-05-15T23:09:39Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -135,11 +135,11 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "curl",
-            "version": "8.19.0_2"
+            "version": "8.20.0"
           },
           {
             "name": "cyrus-sasl",
@@ -151,7 +151,7 @@
           },
           {
             "name": "expat",
-            "version": "2.7.5"
+            "version": "2.8.0"
           },
           {
             "name": "fontconfig",
@@ -1029,7 +1029,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-05-06T23:38:36Z",
+      "generated": "2026-05-15T23:10:09Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1163,7 +1163,7 @@
           },
           {
             "name": "curl",
-            "version": "8.19.0_2"
+            "version": "8.20.0"
           },
           {
             "name": "cyrus-sasl",
@@ -1183,7 +1183,7 @@
           },
           {
             "name": "expat",
-            "version": "2.7.5"
+            "version": "2.8.0"
           },
           {
             "name": "font-bh-ttf",
@@ -2065,7 +2065,7 @@
     "pkg-latest": {
       "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-05-06T23:38:32Z",
+      "generated": "2026-05-15T23:09:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2219,7 +2219,7 @@
           },
           {
             "name": "expat",
-            "version": "2.8.0"
+            "version": "2.8.1"
           },
           {
             "name": "font-bh-ttf",
@@ -2243,7 +2243,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "giflib",
@@ -2267,7 +2267,7 @@
           },
           {
             "name": "javavmwrapper",
-            "version": "2.7.10_1"
+            "version": "2.7.10_2"
           },
           {
             "name": "jbigkit",
@@ -2283,7 +2283,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.19"
+            "version": "2.19.1"
           },
           {
             "name": "lerc",
@@ -2383,7 +2383,7 @@
           },
           {
             "name": "mkfontscale",
-            "version": "1.2.3"
+            "version": "1.2.4"
           },
           {
             "name": "mongodb70",
