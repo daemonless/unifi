@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-15T23:11:24Z",
+  "generated": "2026-05-23T21:06:28Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-05-15T23:09:39Z",
+      "generated": "2026-05-23T21:04:05Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -135,7 +135,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "curl",
@@ -151,7 +151,7 @@
           },
           {
             "name": "expat",
-            "version": "2.8.0"
+            "version": "2.8.1"
           },
           {
             "name": "fontconfig",
@@ -1029,7 +1029,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-05-15T23:10:09Z",
+      "generated": "2026-05-23T21:05:11Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1159,7 +1159,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "curl",
@@ -1183,7 +1183,7 @@
           },
           {
             "name": "expat",
-            "version": "2.8.0"
+            "version": "2.8.1"
           },
           {
             "name": "font-bh-ttf",
@@ -2065,7 +2065,7 @@
     "pkg-latest": {
       "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-05-15T23:09:53Z",
+      "generated": "2026-05-23T21:05:16Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2195,7 +2195,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "curl",
@@ -2311,7 +2311,7 @@
           },
           {
             "name": "libXext",
-            "version": "1.3.6,1"
+            "version": "1.3.7,1"
           },
           {
             "name": "libXfixes",
@@ -2319,7 +2319,7 @@
           },
           {
             "name": "libXi",
-            "version": "1.8.2,1"
+            "version": "1.8.3,1"
           },
           {
             "name": "libXrandr",
@@ -2387,7 +2387,7 @@
           },
           {
             "name": "mongodb70",
-            "version": "7.0.31_4"
+            "version": "7.0.34"
           },
           {
             "name": "mpdecimal",
