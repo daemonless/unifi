@@ -6,7 +6,7 @@ mkdir -p /config/db /var/run/mongodb
 chown -R bsd:bsd /config/db /var/run/mongodb
 
 echo "Starting MongoDB for UniFi..."
-exec /usr/local/bin/mongod \
+exec /usr/local/bin/s6-setuidgid bsd /usr/local/bin/mongod \
     --dbpath /config/db \
     --port 27117 \
     --unixSocketPrefix /var/run/mongodb \
