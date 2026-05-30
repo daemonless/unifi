@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-23T21:06:28Z",
+  "generated": "2026-05-30T18:05:17Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.3.58",
       "arch": "amd64",
-      "generated": "2026-05-23T21:04:05Z",
+      "generated": "2026-05-30T18:03:07Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -51,7 +51,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -95,7 +95,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -107,7 +107,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1029,7 +1029,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-05-23T21:05:11Z",
+      "generated": "2026-05-30T18:02:27Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1075,7 +1075,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -1119,7 +1119,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1131,7 +1131,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1159,7 +1159,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "curl",
@@ -2014,7 +2014,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "HEAD-20260502-0542"
+            "version": "HEAD-20260521-0541"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -2063,9 +2063,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "10.3.58",
+      "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-05-23T21:05:16Z",
+      "generated": "2026-05-30T18:04:04Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2111,7 +2111,7 @@
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-libexecinfo",
@@ -2155,7 +2155,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p8"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -2167,7 +2167,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p1"
+            "version": "15.0p9"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -2195,7 +2195,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.123.1"
+            "version": "3.124"
           },
           {
             "name": "curl",
@@ -2223,7 +2223,7 @@
           },
           {
             "name": "font-bh-ttf",
-            "version": "1.0.3_5"
+            "version": "1.0.4"
           },
           {
             "name": "font-misc-ethiopic",
@@ -2358,6 +2358,10 @@
             "version": "2.3.8"
           },
           {
+            "name": "liblz4",
+            "version": "1.10.0_2,1"
+          },
+          {
             "name": "libnghttp2",
             "version": "1.69.0"
           },
@@ -2387,7 +2391,7 @@
           },
           {
             "name": "mongodb70",
-            "version": "7.0.34"
+            "version": "7.0.34_1"
           },
           {
             "name": "mpdecimal",
@@ -2443,7 +2447,7 @@
           },
           {
             "name": "snowballstemmer",
-            "version": "3.0.1"
+            "version": "3.1.0"
           },
           {
             "name": "tiff",
@@ -2451,7 +2455,7 @@
           },
           {
             "name": "unifi10",
-            "version": "10.3.58"
+            "version": "10.4.57"
           },
           {
             "name": "xorg-fonts-truetype",
@@ -2467,7 +2471,7 @@
           },
           {
             "name": "zstd",
-            "version": "1.5.7_1"
+            "version": "1.5.7_2"
           }
         ],
         "go": [],
@@ -3115,7 +3119,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 100,
+        "freebsd": 101,
         "go": 0,
         "java": 156,
         "node": 0,
@@ -3123,7 +3127,7 @@
         "python": 2,
         "ruby": 0,
         "rust": 0,
-        "total": 258
+        "total": 259
       }
     }
   }
