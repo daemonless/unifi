@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-30T18:05:17Z",
+  "generated": "2026-06-05T19:43:07Z",
   "image": "unifi",
   "tags": {
     "latest": {
-      "app_version": "10.3.58",
+      "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-05-30T18:03:07Z",
+      "generated": "2026-06-05T19:40:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1029,7 +1029,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-05-30T18:02:27Z",
+      "generated": "2026-06-05T19:41:37Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2065,7 +2065,7 @@
     "pkg-latest": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-05-30T18:04:04Z",
+      "generated": "2026-06-05T19:41:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2447,7 +2447,7 @@
           },
           {
             "name": "snowballstemmer",
-            "version": "3.1.0"
+            "version": "3.1.1"
           },
           {
             "name": "tiff",
