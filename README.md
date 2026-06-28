@@ -19,53 +19,49 @@ Ubiquiti UniFi Network Application for managing UniFi access points, switches, a
 | **Website** | [https://ui.com/](https://ui.com/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
 | `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
-
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
-
 ## Deployment
-
 
 ### Podman Compose
 
 ```yaml
 services:
   unifi:
-    image: ghcr.io/daemonless/unifi:latest
+    image: "ghcr.io/daemonless/unifi:latest"
     container_name: unifi
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
+      - PUID=1000  # User ID for the application process
+      - PGID=1000  # Group ID for the application process
+      - TZ=UTC  # Timezone for the container
     volumes:
       - "/path/to/containers/unifi:/config"
     ports:
-      - 8443:8443
-      - 8080:8080
-      - 8843:8843
-      - 8880:8880
-      - 6789:6789
-      - 3478:3478
-      - 10001:10001
+      - "8443:8443"
+      - "8080:8080"
+      - "8843:8843"
+      - "8880:8880"
+      - "6789:6789"
+      - "3478:3478"
+      - "10001:10001"
     annotations:
       org.freebsd.jail.allow.mlock: "true"
     restart: unless-stopped
 ```
 
 ### AppJail Director
-
 **.env**:
 
 ```
+# .env
+
 DIRECTOR_PROJECT=unifi
 PUID=1000
 PGID=1000
@@ -75,6 +71,8 @@ TZ=UTC
 **appjail-director.yml**:
 
 ```yaml
+# appjail-director.yml
+
 options:
   - virtualnet: ':<random> default'
   - nat:
@@ -83,6 +81,13 @@ services:
     name: unifi
     options:
       - container: 'boot args:--pull'
+      - expose: '8443:8443 proto:tcp' \
+      - expose: '8080:8080 proto:tcp' \
+      - expose: '8843:8843 proto:tcp' \
+      - expose: '8880:8880 proto:tcp' \
+      - expose: '6789:6789 proto:tcp' \
+      - expose: '3478:3478 proto:udp' \
+      - expose: '10001:10001 proto:udp' \
     oci:
       user: root
       environment:
@@ -99,12 +104,15 @@ volumes:
 **Makejail**:
 
 ```
+# Makejail
+
 ARG tag=latest
 
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/unifi:${tag}
 SET allow.mlock=1
 ```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
 
@@ -125,13 +133,36 @@ podman run -d --name unifi \
   ghcr.io/daemonless/unifi:latest
 ```
 
+### AppJail
+
+```bash
+appjail oci run -Pd \
+  -o overwrite=force \
+  -o container="args:--pull" \
+  -o virtualnet=":<random> default" \
+  -o nat \
+  -o expose="8443:8443 proto:tcp" \
+  -o expose="8080:8080 proto:tcp" \
+  -o expose="8843:8843 proto:tcp" \
+  -o expose="8880:8880 proto:tcp" \
+  -o expose="6789:6789 proto:tcp" \
+  -o expose="3478:3478 proto:udp" \
+  -o expose="10001:10001 proto:udp" \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
+  -o fstab="/path/to/containers/unifi /config <pseudofs>" \
+  ghcr.io/daemonless/unifi:latest unifi
+```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
 ### Ansible
 
 ```yaml
 - name: Deploy unifi
   containers.podman.podman_container:
     name: unifi
-    image: ghcr.io/daemonless/unifi:latest
+    image: "ghcr.io/daemonless/unifi:latest"
     state: started
     restart_policy: always
     env:
@@ -151,7 +182,6 @@ podman run -d --name unifi \
     annotation:
       org.freebsd.jail.allow.mlock: "true"
 ```
-
 
 ## Parameters
 
@@ -183,7 +213,7 @@ podman run -d --name unifi \
 
 **Architectures:** amd64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
-**Base:** FreeBSD 15.0
+**Base:** FreeBSD 15.1
 
 ---
 
