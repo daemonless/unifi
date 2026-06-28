@@ -1,129 +1,137 @@
 {
-  "generated": "2026-06-23T23:25:45Z",
+  "generated": "2026-06-28T22:47:44Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-06-23T23:23:54Z",
+      "generated": "2026-06-28T22:45:02Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
           {
             "name": "FreeBSD-audit-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-blocklist",
-            "version": "15.0p3"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-bzip2-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-certctl",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ctf-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-fetch",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-kerberos-lib",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libarchive",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libbsdstat",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0p9"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libexecinfo",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libldns",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libmagic",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libucl",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-mtree",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ncurses-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0p10"
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-pam-lib",
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-rc",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-tcpd",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ufs-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-xz-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zlib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0p7"
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-zstd-lib",
+            "version": "15.1"
           },
           {
             "name": "alsa-lib",
@@ -1015,7 +1023,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 91,
+        "freebsd": 93,
         "go": 0,
         "java": 155,
         "node": 0,
@@ -1023,131 +1031,139 @@
         "python": 2,
         "ruby": 0,
         "rust": 0,
-        "total": 248
+        "total": 250
       }
     },
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-06-23T23:24:16Z",
+      "generated": "2026-06-28T22:44:41Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
           {
             "name": "FreeBSD-audit-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-blocklist",
-            "version": "15.0p3"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-bzip2-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-certctl",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ctf-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-fetch",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-kerberos-lib",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libarchive",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libbsdstat",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0p9"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libexecinfo",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libldns",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libmagic",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libucl",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-mtree",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ncurses-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0p10"
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-pam-lib",
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-rc",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-tcpd",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ufs-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-xz-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zlib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0p7"
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-zstd-lib",
+            "version": "15.1"
           },
           {
             "name": "alsa-lib",
@@ -2051,7 +2067,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 100,
+        "freebsd": 102,
         "go": 0,
         "java": 149,
         "node": 0,
@@ -2059,131 +2075,139 @@
         "python": 2,
         "ruby": 0,
         "rust": 0,
-        "total": 251
+        "total": 253
       }
     },
     "pkg-latest": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-06-23T23:24:36Z",
+      "generated": "2026-06-28T22:46:33Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
           {
             "name": "FreeBSD-audit-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-blocklist",
-            "version": "15.0p3"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-bzip2-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-certctl",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ctf-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-fetch",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-kerberos-lib",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libarchive",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libbsdstat",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libcasper",
-            "version": "15.0p9"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libexecinfo",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libldns",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libmagic",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-libucl",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-mtree",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ncurses-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0p10"
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-pam-lib",
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-rc",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-tcpd",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-ufs-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-xz-lib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zlib",
-            "version": "15.0"
+            "version": "15.1"
           },
           {
             "name": "FreeBSD-zoneinfo",
-            "version": "15.0p7"
+            "version": "15.1"
+          },
+          {
+            "name": "FreeBSD-zstd-lib",
+            "version": "15.1"
           },
           {
             "name": "alsa-lib",
@@ -2323,7 +2347,7 @@
           },
           {
             "name": "libXrandr",
-            "version": "1.5.4"
+            "version": "1.5.5"
           },
           {
             "name": "libXrender",
@@ -2343,7 +2367,7 @@
           },
           {
             "name": "libffi",
-            "version": "3.5.2"
+            "version": "3.6.0"
           },
           {
             "name": "libfontenc",
@@ -2371,7 +2395,7 @@
           },
           {
             "name": "libssh2",
-            "version": "1.11.1,3"
+            "version": "1.11.1_1,3"
           },
           {
             "name": "libunistring",
@@ -2418,12 +2442,12 @@
             "version": "1.6.58"
           },
           {
-            "name": "py311-packaging",
+            "name": "py312-packaging",
             "version": "26.2"
           },
           {
-            "name": "python311",
-            "version": "3.11.15_4"
+            "name": "python312",
+            "version": "3.12.13_3"
           },
           {
             "name": "readline",
@@ -3119,7 +3143,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 101,
+        "freebsd": 103,
         "go": 0,
         "java": 156,
         "node": 0,
@@ -3127,7 +3151,7 @@
         "python": 2,
         "ruby": 0,
         "rust": 0,
-        "total": 259
+        "total": 261
       }
     }
   }
