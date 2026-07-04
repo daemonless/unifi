@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-28T22:47:44Z",
+  "generated": "2026-07-04T23:28:12Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-06-28T22:45:02Z",
+      "generated": "2026-07-04T23:23:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -27,7 +27,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -99,7 +99,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -111,7 +111,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -119,7 +119,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -147,7 +147,7 @@
           },
           {
             "name": "curl",
-            "version": "8.20.0"
+            "version": "8.21.0"
           },
           {
             "name": "cyrus-sasl",
@@ -1037,7 +1037,7 @@
     "pkg": {
       "app_version": "10.1.89",
       "arch": "amd64",
-      "generated": "2026-06-28T22:44:41Z",
+      "generated": "2026-07-04T23:22:14Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1059,7 +1059,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -1131,7 +1131,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1143,7 +1143,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1151,7 +1151,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -1179,7 +1179,7 @@
           },
           {
             "name": "curl",
-            "version": "8.20.0"
+            "version": "8.21.0"
           },
           {
             "name": "cyrus-sasl",
@@ -2081,7 +2081,7 @@
     "pkg-latest": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-06-28T22:46:33Z",
+      "generated": "2026-07-04T23:27:03Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2103,7 +2103,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -2175,7 +2175,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -2187,7 +2187,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -2195,7 +2195,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -2223,7 +2223,7 @@
           },
           {
             "name": "curl",
-            "version": "8.20.0"
+            "version": "8.21.0"
           },
           {
             "name": "cyrus-sasl",
@@ -2243,7 +2243,7 @@
           },
           {
             "name": "expat",
-            "version": "2.8.1"
+            "version": "2.8.2"
           },
           {
             "name": "font-bh-ttf",
@@ -2303,7 +2303,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "lcms2",
@@ -2391,7 +2391,7 @@
           },
           {
             "name": "libpsl",
-            "version": "0.21.5_2"
+            "version": "0.22.0"
           },
           {
             "name": "libssh2",
