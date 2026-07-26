@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-24T00:05:19Z",
+  "generated": "2026-07-26T20:33:51Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-07-24T00:02:03Z",
+      "generated": "2026-07-26T20:30:56Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1045,7 +1045,7 @@
     "pkg": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-07-24T00:02:37Z",
+      "generated": "2026-07-26T20:31:40Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2123,9 +2123,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "10.4.57",
+      "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-07-24T00:04:09Z",
+      "generated": "2026-07-26T20:32:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2319,7 +2319,7 @@
           },
           {
             "name": "giflib",
-            "version": "5.2.2"
+            "version": "6.1.3"
           },
           {
             "name": "glib",
@@ -2463,7 +2463,7 @@
           },
           {
             "name": "mongodb70",
-            "version": "7.0.37"
+            "version": "7.0.37_1"
           },
           {
             "name": "mpdecimal",
@@ -2483,7 +2483,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.8.0_1"
+            "version": "2.8.1"
           },
           {
             "name": "png",
@@ -2527,7 +2527,7 @@
           },
           {
             "name": "unifi10",
-            "version": "10.4.57"
+            "version": "10.4.57_1"
           },
           {
             "name": "xorg-fonts-truetype",
@@ -3154,7 +3154,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "1.1.10.8"
+            "version": "HEAD-20260704-0314"
           },
           {
             "name": "org.yaml:snakeyaml",
