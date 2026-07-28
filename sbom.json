@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-26T20:33:51Z",
+  "generated": "2026-07-28T07:06:16Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.4.57",
       "arch": "amd64",
-      "generated": "2026-07-26T20:30:56Z",
+      "generated": "2026-07-28T07:03:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1043,9 +1043,9 @@
       }
     },
     "pkg": {
-      "app_version": "10.4.57",
+      "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-07-26T20:31:40Z",
+      "generated": "2026-07-28T07:03:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1447,7 +1447,7 @@
           },
           {
             "name": "unifi10",
-            "version": "10.4.57"
+            "version": "10.4.57_1"
           },
           {
             "name": "xorg-fonts-truetype",
@@ -2074,7 +2074,7 @@
           },
           {
             "name": "org.xerial.snappy:snappy-java",
-            "version": "1.1.10.8"
+            "version": "HEAD-20260709-0546"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -2125,7 +2125,7 @@
     "pkg-latest": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-07-26T20:32:35Z",
+      "generated": "2026-07-28T07:04:59Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
