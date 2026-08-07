@@ -11,6 +11,9 @@ Source: dbuild templates
 
 Ubiquiti UniFi Network Application for managing UniFi access points, switches, and gateways.
 
+> [!WARNING]
+> **Requires ocijail ≥ 0.6.0 (annotation support).** This image needs the jail permission **allow.mlock**, applied via OCI annotations. FreeBSD **quarterly ships ocijail 0.4.0, which has no annotation support** — the container starts but the permission is silently dropped, so the app can crash or misbehave at runtime. Point your pkg repos at the `latest` branch (ocijail ≥ 0.6.0), then run with the annotation flag below. See the [ocijail guide](https://daemonless.io/guides/ocijail-patch/).
+
 | | |
 |---|---|
 | **Port** | 8443 |
