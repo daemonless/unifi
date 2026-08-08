@@ -8,6 +8,9 @@ cit:
     - org.freebsd.jail.allow.mlock=true
 
 build:
+  architectures:
+    - amd64
+    - aarch64
   variants:
     - tag: latest
       containerfile: Containerfile
