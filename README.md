@@ -84,13 +84,13 @@ services:
     name: unifi
     options:
       - container: 'boot args:--pull'
-      - expose: '8443:8443 proto:tcp' \
-      - expose: '8080:8080 proto:tcp' \
-      - expose: '8843:8843 proto:tcp' \
-      - expose: '8880:8880 proto:tcp' \
-      - expose: '6789:6789 proto:tcp' \
-      - expose: '3478:3478 proto:udp' \
-      - expose: '10001:10001 proto:udp' \
+      - expose: '8443:8443 proto:tcp'
+      - expose: '8080:8080 proto:tcp'
+      - expose: '8843:8843 proto:tcp'
+      - expose: '8880:8880 proto:tcp'
+      - expose: '6789:6789 proto:tcp'
+      - expose: '3478:3478 proto:udp'
+      - expose: '10001:10001 proto:udp'
     oci:
       user: root
       environment:
@@ -214,7 +214,7 @@ appjail oci run -Pd \
 | `3478` | UDP | STUN (UDP) |
 | `10001` | UDP | Device discovery (UDP) |
 
-**Architectures:** amd64
+**Architectures:** amd64, aarch64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
 **Base:** FreeBSD 15.1
 

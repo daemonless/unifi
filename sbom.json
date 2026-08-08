@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-07T14:49:55Z",
+  "generated": "2026-08-08T07:13:55Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.5.67",
       "arch": "amd64",
-      "generated": "2026-08-07T14:46:25Z",
+      "generated": "2026-08-08T07:10:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1510,7 +1510,7 @@
     "pkg": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-08-07T14:46:48Z",
+      "generated": "2026-08-08T07:11:23Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3072,7 +3072,7 @@
     "pkg-latest": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-08-07T14:46:10Z",
+      "generated": "2026-08-08T07:10:59Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
