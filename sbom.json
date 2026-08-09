@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-08T07:13:55Z",
+  "generated": "2026-08-09T14:47:53Z",
   "image": "unifi",
   "tags": {
     "latest": {
       "app_version": "10.5.67",
       "arch": "amd64",
-      "generated": "2026-08-08T07:10:52Z",
+      "generated": "2026-08-09T14:45:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1510,7 +1510,7 @@
     "pkg": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-08-08T07:11:23Z",
+      "generated": "2026-08-09T14:44:56Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3070,9 +3070,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "10.4.57_1",
+      "app_version": "10.5.67",
       "arch": "amd64",
-      "generated": "2026-08-08T07:10:59Z",
+      "generated": "2026-08-09T14:45:09Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3421,7 +3421,7 @@
               "LGPL20"
             ],
             "name": "glib",
-            "version": "2.86.4,2"
+            "version": "2.88.3,2"
           },
           {
             "licenses": [
@@ -3785,7 +3785,7 @@
           },
           {
             "name": "unifi10",
-            "version": "10.4.57_1"
+            "version": "10.5.67"
           },
           {
             "licenses": [
@@ -3862,32 +3862,37 @@
           {
             "name": "com.fasterxml.jackson.core:jackson-annotations",
             "purl": "",
-            "version": "2.19.4"
+            "version": "2.21"
           },
           {
             "name": "com.fasterxml.jackson.core:jackson-core",
             "purl": "",
-            "version": "2.19.4"
+            "version": "2.21.2"
           },
           {
             "name": "com.fasterxml.jackson.core:jackson-databind",
             "purl": "",
-            "version": "2.19.4"
+            "version": "2.21.2"
+          },
+          {
+            "name": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
+            "purl": "",
+            "version": "2.21.2"
           },
           {
             "name": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8",
             "purl": "",
-            "version": "2.20.0"
+            "version": "2.21.2"
           },
           {
             "name": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
             "purl": "",
-            "version": "2.20.0"
+            "version": "2.21.2"
           },
           {
             "name": "com.fasterxml.jackson.module:jackson-module-parameter-names",
             "purl": "",
-            "version": "2.20.0"
+            "version": "2.21.2"
           },
           {
             "name": "com.fasterxml.uuid:java-uuid-generator",
@@ -3935,6 +3940,11 @@
             "version": "0.9.0"
           },
           {
+            "name": "com.google.code.findbugs:jsr305",
+            "purl": "",
+            "version": "3.0.2"
+          },
+          {
             "name": "com.google.errorprone:error_prone_annotations",
             "purl": "",
             "version": "2.43.0"
@@ -3957,7 +3967,7 @@
           {
             "name": "com.google.j2objc:j2objc-annotations",
             "purl": "",
-            "version": "1.1"
+            "version": "3.0.0"
           },
           {
             "name": "com.googlecode.java-ipv6:java-ipv6",
@@ -4072,17 +4082,17 @@
           {
             "name": "io.micrometer:micrometer-commons",
             "purl": "",
-            "version": "1.15.10"
+            "version": "1.15.11"
           },
           {
             "name": "io.micrometer:micrometer-observation",
             "purl": "",
-            "version": "1.15.10"
+            "version": "1.15.11"
           },
           {
             "name": "io.projectreactor:reactor-core",
             "purl": "",
-            "version": "3.7.17"
+            "version": "3.7.18"
           },
           {
             "name": "it.sauronsoftware.cron4j:cron4j",
@@ -4137,7 +4147,7 @@
           {
             "name": "jaxen:jaxen",
             "purl": "",
-            "version": "2.0.0"
+            "version": "2.0.1"
           },
           {
             "name": "joda-time:joda-time",
@@ -4227,22 +4237,22 @@
           {
             "name": "org.apache.tomcat.embed:tomcat-embed-core",
             "purl": "",
-            "version": "10.1.52"
+            "version": "10.1.54"
           },
           {
             "name": "org.apache.tomcat.embed:tomcat-embed-el",
             "purl": "",
-            "version": "10.1.52"
+            "version": "10.1.54"
           },
           {
             "name": "org.apache.tomcat.embed:tomcat-embed-websocket",
             "purl": "",
-            "version": "10.1.52"
+            "version": "10.1.54"
           },
           {
             "name": "org.apache.tomcat:tomcat-annotations-api",
             "purl": "",
-            "version": "10.1.52"
+            "version": "10.1.54"
           },
           {
             "name": "org.bouncycastle:bcpkix-jdk18on",
@@ -4432,137 +4442,137 @@
           {
             "name": "org.springframework.boot:spring-boot",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-autoconfigure",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-data-jdbc",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-data-mongodb",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-jdbc",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-json",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-logging",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-tomcat",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-validation",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-web",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.boot:spring-boot-starter-websocket",
             "purl": "",
-            "version": "3.5.12"
+            "version": "3.5.14"
           },
           {
             "name": "org.springframework.data:spring-data-commons",
             "purl": "",
-            "version": "3.5.10"
+            "version": "3.5.11"
           },
           {
             "name": "org.springframework.data:spring-data-jdbc",
             "purl": "",
-            "version": "3.5.10"
+            "version": "3.5.11"
           },
           {
             "name": "org.springframework.data:spring-data-mongodb",
             "purl": "",
-            "version": "4.5.10"
+            "version": "4.5.11"
           },
           {
             "name": "org.springframework.data:spring-data-relational",
             "purl": "",
-            "version": "3.5.10"
+            "version": "3.5.11"
           },
           {
             "name": "org.springframework:spring-aop",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-beans",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-context",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-core",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-expression",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-jdbc",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-messaging",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-tx",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-web",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-webmvc",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.springframework:spring-websocket",
             "purl": "",
-            "version": "6.2.17"
+            "version": "6.2.18"
           },
           {
             "name": "org.tinyjee.jgraphx:jgraphx",
@@ -4622,13 +4632,13 @@
         "dotnet": 0,
         "freebsd": 104,
         "go": 0,
-        "java": 156,
+        "java": 158,
         "node": 0,
         "php": 0,
         "python": 2,
         "ruby": 0,
         "rust": 0,
-        "total": 262
+        "total": 264
       }
     }
   }
