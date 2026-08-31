@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-11T10:52:47Z",
+  "generated": "2026-08-31T22:13:43Z",
   "image": "unifi",
   "tags": {
     "latest-amd64": {
-      "app_version": "10.5.67",
+      "app_version": "10.6.101",
       "arch": "amd64",
-      "generated": "2026-08-11T10:50:40Z",
+      "generated": "2026-08-31T22:10:06Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -147,7 +147,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -175,7 +175,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -252,7 +252,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -614,7 +614,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.13_3"
+            "version": "3.12.14"
           },
           {
             "licenses": [
@@ -778,7 +778,7 @@
           {
             "name": "com.github.ben-manes.caffeine:caffeine",
             "purl": "",
-            "version": "3.2.3"
+            "version": "3.2.4"
           },
           {
             "name": "com.github.fommil:openssh",
@@ -818,7 +818,7 @@
           {
             "name": "com.google.errorprone:error_prone_annotations",
             "purl": "",
-            "version": "2.43.0"
+            "version": "2.49.0"
           },
           {
             "name": "com.google.guava:failureaccess",
@@ -878,7 +878,7 @@
           {
             "name": "com.hierynomus:sshj",
             "purl": "",
-            "version": "0.39.0"
+            "version": "0.40.0"
           },
           {
             "name": "com.sun.istack:istack-commons-runtime",
@@ -1021,11 +1021,6 @@
             "version": "2.12.7"
           },
           {
-            "name": "net.i2p.crypto:eddsa",
-            "purl": "",
-            "version": "0.3.0"
-          },
-          {
             "name": "net.java.dev.jna:jna",
             "purl": "",
             "version": "5.12.1"
@@ -1123,17 +1118,17 @@
           {
             "name": "org.bouncycastle:bcpkix-jdk18on",
             "purl": "",
-            "version": "1.78.1"
+            "version": "1.84"
           },
           {
             "name": "org.bouncycastle:bcprov-jdk18on",
             "purl": "",
-            "version": "1.78.1"
+            "version": "1.84"
           },
           {
             "name": "org.bouncycastle:bcutil-jdk18on",
             "purl": "",
-            "version": "1.78.1"
+            "version": "1.84"
           },
           {
             "name": "org.checkerframework:checker-qual",
@@ -1456,6 +1451,11 @@
             "version": "1.1.10.8"
           },
           {
+            "name": "org.xerial:sqlite-jdbc",
+            "purl": "",
+            "version": "3.53.1.0"
+          },
+          {
             "name": "org.yaml:snakeyaml",
             "purl": "",
             "version": "2.4"
@@ -1510,7 +1510,7 @@
     "pkg-amd64": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-08-11T10:51:20Z",
+      "generated": "2026-08-31T22:10:16Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1652,7 +1652,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -1680,7 +1680,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -1757,7 +1757,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -2170,7 +2170,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.13_3"
+            "version": "3.12.14"
           },
           {
             "licenses": [
@@ -3072,7 +3072,7 @@
     "pkg-latest-amd64": {
       "app_version": "10.5.67",
       "arch": "amd64",
-      "generated": "2026-08-11T10:50:36Z",
+      "generated": "2026-08-31T22:11:45Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3214,7 +3214,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -3242,7 +3242,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -3319,7 +3319,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -3363,7 +3363,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.2"
+            "version": "2.8.3"
           },
           {
             "licenses": [
@@ -3587,7 +3587,7 @@
               "MIT"
             ],
             "name": "libffi",
-            "version": "3.7.1"
+            "version": "3.8.0"
           },
           {
             "licenses": [
@@ -3623,14 +3623,14 @@
               "MIT"
             ],
             "name": "libnghttp2",
-            "version": "1.69.0"
+            "version": "1.70.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "libpsl",
-            "version": "0.22.0"
+            "version": "0.23.3"
           },
           {
             "licenses": [
@@ -3675,7 +3675,7 @@
               "SSPLv1"
             ],
             "name": "mongodb70",
-            "version": "7.0.39"
+            "version": "7.0.40"
           },
           {
             "licenses": [
@@ -3710,7 +3710,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.1_1"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -3732,7 +3732,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.13_3"
+            "version": "3.12.14"
           },
           {
             "licenses": [
@@ -4587,7 +4587,7 @@
           {
             "name": "org.xerial.snappy:snappy-java",
             "purl": "",
-            "version": "HEAD-20260730-0316"
+            "version": "HEAD-20260827-0409"
           },
           {
             "name": "org.yaml:snakeyaml",
