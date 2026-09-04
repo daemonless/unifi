@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-31T22:13:43Z",
+  "generated": "2026-09-04T13:33:34Z",
   "image": "unifi",
   "tags": {
     "latest-amd64": {
       "app_version": "10.6.101",
       "arch": "amd64",
-      "generated": "2026-08-31T22:10:06Z",
+      "generated": "2026-09-04T13:30:57Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -252,7 +252,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.128"
           },
           {
             "licenses": [
@@ -1510,7 +1510,7 @@
     "pkg-amd64": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-08-31T22:10:16Z",
+      "generated": "2026-09-04T13:32:21Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3015,7 +3015,7 @@
           {
             "name": "org.xerial.snappy:snappy-java",
             "purl": "",
-            "version": "HEAD-20260730-0600"
+            "version": "HEAD-20260827-0616"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -3070,9 +3070,9 @@
       }
     },
     "pkg-latest-amd64": {
-      "app_version": "10.5.67",
+      "app_version": "10.6.101",
       "arch": "amd64",
-      "generated": "2026-08-31T22:11:45Z",
+      "generated": "2026-09-04T13:30:39Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3785,7 +3785,7 @@
           },
           {
             "name": "unifi10",
-            "version": "10.5.67"
+            "version": "10.6.101"
           },
           {
             "licenses": [
@@ -3907,7 +3907,7 @@
           {
             "name": "com.github.ben-manes.caffeine:caffeine",
             "purl": "",
-            "version": "3.2.3"
+            "version": "3.2.4"
           },
           {
             "name": "com.github.fommil:openssh",
@@ -3947,7 +3947,7 @@
           {
             "name": "com.google.errorprone:error_prone_annotations",
             "purl": "",
-            "version": "2.43.0"
+            "version": "2.49.0"
           },
           {
             "name": "com.google.guava:failureaccess",
@@ -4007,7 +4007,7 @@
           {
             "name": "com.hierynomus:sshj",
             "purl": "",
-            "version": "0.39.0"
+            "version": "0.40.0"
           },
           {
             "name": "com.sun.istack:istack-commons-runtime",
@@ -4155,11 +4155,6 @@
             "version": "2.12.7"
           },
           {
-            "name": "net.i2p.crypto:eddsa",
-            "purl": "",
-            "version": "0.3.0"
-          },
-          {
             "name": "net.java.dev.jna:jna",
             "purl": "",
             "version": "5.12.1"
@@ -4257,17 +4252,17 @@
           {
             "name": "org.bouncycastle:bcpkix-jdk18on",
             "purl": "",
-            "version": "1.78.1"
+            "version": "1.84"
           },
           {
             "name": "org.bouncycastle:bcprov-jdk18on",
             "purl": "",
-            "version": "1.78.1"
+            "version": "1.84"
           },
           {
             "name": "org.bouncycastle:bcutil-jdk18on",
             "purl": "",
-            "version": "1.78.1"
+            "version": "1.84"
           },
           {
             "name": "org.checkerframework:checker-qual",
@@ -4588,6 +4583,11 @@
             "name": "org.xerial.snappy:snappy-java",
             "purl": "",
             "version": "HEAD-20260827-0409"
+          },
+          {
+            "name": "org.xerial:sqlite-jdbc",
+            "purl": "",
+            "version": "3.53.1.0"
           },
           {
             "name": "org.yaml:snakeyaml",
