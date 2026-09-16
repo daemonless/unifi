@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/unifi/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/unifi/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/unifi?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/unifi/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/unifi?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/unifi)
 [![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Ubiquiti UniFi Network Application for managing UniFi access points, switches, and gateways.
@@ -83,7 +84,7 @@ services:
   unifi:
     name: unifi
     options:
-      - container: 'boot args:--pull'
+      - container: 'args:--pull'
       - expose: '8443:8443 proto:tcp'
       - expose: '8080:8080 proto:tcp'
       - expose: '8843:8843 proto:tcp'
@@ -91,6 +92,7 @@ services:
       - expose: '6789:6789 proto:tcp'
       - expose: '3478:3478 proto:udp'
       - expose: '10001:10001 proto:udp'
+      - template: !ENV '${PWD}/template.conf'
     oci:
       user: root
       environment:
@@ -111,14 +113,30 @@ volumes:
 
 ARG tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/unifi:${tag}
-SET allow.mlock=1
+```
+
+**template.conf**:
+
+```
+# template.conf
+
+exec.start: "/bin/sh /etc/rc"
+exec.stop: "/bin/sh /etc/rc.shutdown jail"
+mount.devfs
+persist
+allow.mlock
 ```
 
 Save the files above, then run `appjail-director up`.
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Podman CLI
 
@@ -143,12 +161,14 @@ Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
+
 ```bash
 appjail oci run -Pd \
   -o overwrite=force \
   -o container="args:--pull" \
   -o virtualnet=":<random> default" \
   -o nat \
+  -o template=template.conf \
   -o expose="8443:8443 proto:tcp" \
   -o expose="8080:8080 proto:tcp" \
   -o expose="8843:8843 proto:tcp" \
@@ -163,35 +183,53 @@ appjail oci run -Pd \
   ghcr.io/daemonless/unifi:latest unifi
 ```
 
-Save as `run.sh`, then run `sh run.sh`.
+**template.conf**:
+```
+# template.conf
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+exec.start: "/bin/sh /etc/rc"
+exec.stop: "/bin/sh /etc/rc.shutdown jail"
+mount.devfs
+persist
+allow.mlock
+```
+
+Save the files above, then run `sh run.sh`.
+
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Bastille
 
 > [!WARNING]
-> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+> Bastille's OCI support is **experimental**. It requires `buildah` and shares the host network stack (`inherit`). Mount volumes with `--volume HOST JAIL`; without it, image-declared volumes are stored under `${bastille_volumesdir}/${jail}`.
 
 ```yaml
 services:
   unifi:
+    name: unifi
     image: "ghcr.io/daemonless/unifi:latest"
-    container_name: unifi
-    network_mode: host  # jail shares host networking
+    network:
+      - mode: host
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
+    volumes:
+      - "/path/to/containers/unifi:/config"
 ```
 
-Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
 
 ```bash
 bastille create -O \
   --env PUID=1000 \
   --env PGID=1000 \
   --env TZ=UTC \
-  --data-path /path/to/containers/unifi \
+  --volume /path/to/containers/unifi /config \
   unifi ghcr.io/daemonless/unifi:latest inherit
 ```
 
