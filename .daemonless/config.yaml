@@ -15,8 +15,14 @@ build:
     - tag: latest
       containerfile: Containerfile
       default: true
+      arch_args:
+        aarch64:
+          BASE_VERSION: "15.1-latest"
     - tag: pkg
       containerfile: Containerfile.pkg
+      arch_args:
+        aarch64:
+          BASE_VERSION: "15.1-latest"
     - tag: pkg-latest
       containerfile: Containerfile.pkg
       args:
