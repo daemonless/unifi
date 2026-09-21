@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-19T17:14:07Z",
+  "generated": "2026-09-21T22:37:36Z",
   "image": "unifi",
   "tags": {
     "latest-amd64": {
       "app_version": "10.6.106",
       "arch": "amd64",
-      "generated": "2026-09-19T17:11:31Z",
+      "generated": "2026-09-21T22:23:31Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1524,7 +1524,7 @@
     "pkg-amd64": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-09-19T17:12:05Z",
+      "generated": "2026-09-21T22:24:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3100,7 +3100,7 @@
     "pkg-latest-amd64": {
       "app_version": "10.6.106",
       "arch": "amd64",
-      "generated": "2026-09-19T17:12:26Z",
+      "generated": "2026-09-21T22:24:46Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3781,7 +3781,7 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
