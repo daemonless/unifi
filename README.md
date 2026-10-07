@@ -43,7 +43,7 @@ services:
       - PGID=1000  # Group ID for the application process
       - TZ=UTC  # Timezone for the container
     volumes:
-      - "/path/to/containers/unifi:/config"
+      - "/containers/unifi:/config"
     ports:
       - "8443:8443"
       - "8080:8080"
@@ -103,7 +103,7 @@ services:
       - unifi: /config
 volumes:
   unifi:
-    device: '/path/to/containers/unifi'
+    device: '/containers/unifi'
 ```
 
 **Makejail**:
@@ -138,70 +138,6 @@ Save the files above, then run `appjail-director up`.
 >
 > To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
-### Podman CLI
-
-```bash
-podman run -d --name unifi \
-  -p 8443:8443 \
-  -p 8080:8080 \
-  -p 8843:8843 \
-  -p 8880:8880 \
-  -p 6789:6789 \
-  -p 3478:3478 \
-  -p 10001:10001 \
-  --annotation 'org.freebsd.jail.allow.mlock=true' \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -v /path/to/containers/unifi:/config \
-  ghcr.io/daemonless/unifi:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o template=template.conf \
-  -o expose="8443:8443 proto:tcp" \
-  -o expose="8080:8080 proto:tcp" \
-  -o expose="8843:8843 proto:tcp" \
-  -o expose="8880:8880 proto:tcp" \
-  -o expose="6789:6789 proto:tcp" \
-  -o expose="3478:3478 proto:udp" \
-  -o expose="10001:10001 proto:udp" \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -o fstab="/path/to/containers/unifi /config <pseudofs>" \
-  ghcr.io/daemonless/unifi:latest unifi
-```
-
-**template.conf**:
-```
-# template.conf
-
-exec.start: "/bin/sh /etc/rc"
-exec.stop: "/bin/sh /etc/rc.shutdown jail"
-mount.devfs
-persist
-allow.mlock
-```
-
-Save the files above, then run `sh run.sh`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
 ### Bastille
 
 > [!WARNING]
@@ -219,48 +155,10 @@ services:
       - PGID=1000
       - TZ=UTC
     volumes:
-      - "/path/to/containers/unifi:/config"
+      - "/containers/unifi:/config"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --env PUID=1000 \
-  --env PGID=1000 \
-  --env TZ=UTC \
-  --volume /path/to/containers/unifi /config \
-  unifi ghcr.io/daemonless/unifi:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy unifi
-  containers.podman.podman_container:
-    name: unifi
-    image: "ghcr.io/daemonless/unifi:latest"
-    state: started
-    restart_policy: always
-    env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "UTC"
-    ports:
-      - "8443:8443"
-      - "8080:8080"
-      - "8843:8843"
-      - "8880:8880"
-      - "6789:6789"
-      - "3478:3478"
-      - "10001:10001"
-    volumes:
-      - "/path/to/containers/unifi:/config"
-    annotation:
-      org.freebsd.jail.allow.mlock: "true"
-```
-
-Save as `unifi-deploy.yaml`, then run `ansible-playbook unifi-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 ## Parameters
 

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-24T08:14:30Z",
+  "generated": "2026-10-07T22:10:43Z",
   "image": "unifi",
   "tags": {
     "latest-amd64": {
       "app_version": "10.6.106",
       "arch": "amd64",
-      "generated": "2026-09-24T08:08:13Z",
+      "generated": "2026-10-07T22:02:41Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -266,7 +266,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.129"
+            "version": "3.130"
           },
           {
             "licenses": [
@@ -1524,7 +1524,7 @@
     "pkg-amd64": {
       "app_version": "10.4.57_1",
       "arch": "amd64",
-      "generated": "2026-09-24T08:12:15Z",
+      "generated": "2026-10-07T22:09:27Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3043,7 +3043,7 @@
           {
             "name": "org.xerial.snappy:snappy-java",
             "purl": "",
-            "version": "HEAD-20260827-0616"
+            "version": "HEAD-20261001-0620"
           },
           {
             "name": "org.yaml:snakeyaml",
@@ -3100,7 +3100,7 @@
     "pkg-latest-amd64": {
       "app_version": "10.6.106",
       "arch": "amd64",
-      "generated": "2026-09-24T08:08:54Z",
+      "generated": "2026-10-07T22:02:26Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -3745,7 +3745,7 @@
               "BSD3CLAUSE"
             ],
             "name": "pcre2",
-            "version": "10.48"
+            "version": "10.49"
           },
           {
             "licenses": [
@@ -3774,7 +3774,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14"
+            "version": "3.12.14_1"
           },
           {
             "licenses": [
@@ -3802,7 +3802,7 @@
               "BSD3CLAUSE"
             ],
             "name": "snappy",
-            "version": "1.2.2"
+            "version": "1.3.1"
           },
           {
             "licenses": [
@@ -4624,7 +4624,7 @@
           {
             "name": "org.xerial.snappy:snappy-java",
             "purl": "",
-            "version": "HEAD-20260827-0409"
+            "version": "HEAD-20261004-0321"
           },
           {
             "name": "org.xerial:sqlite-jdbc",
