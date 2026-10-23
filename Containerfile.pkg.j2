@@ -1,5 +1,5 @@
 ARG BASE_VERSION=15.1
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-rcd:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=unifi10
@@ -37,14 +37,7 @@ RUN mkdir -p /config /var/run/unifi && \
 
 # Copy service definition and init scripts
 COPY root/ /
-
-# Make scripts executable
-RUN chmod +x /etc/services.d/*/run /etc/cont-init.d/* 2>/dev/null || true
-
-# Set up s6 service links for unifi and mongodb
-RUN mkdir -p /run/s6/services/unifi /run/s6/services/mongodb && \
-    ln -sf /etc/services.d/unifi/run /run/s6/services/unifi/run && \
-    ln -sf /etc/services.d/mongodb/run /run/s6/services/mongodb/run
+RUN chmod +x /daemonless/libexec/* /daemonless/init.d/*
 
 # UniFi ports:
 # 8443  - Web UI (HTTPS)

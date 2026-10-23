@@ -1,5 +1,5 @@
 #!/bin/sh
-# UniFi Network Application s6 service
+# UniFi Network Application rcd unit
 
 # Wait for MongoDB to be ready (check if socket file exists)
 echo "Waiting for MongoDB..."
@@ -12,12 +12,9 @@ echo "MongoDB is ready"
 
 export LC_ALL=en_US.UTF-8
 
-# Signal readiness when the port is responsive
-s6-ready-when fetch -qo /dev/null --no-verify-hostname --no-verify-peer https://localhost:8443/status
-
 # Start UniFi Controller
 cd /usr/local/share/java/unifi
-exec /usr/local/bin/s6-setuidgid bsd /usr/local/bin/java \
+exec dsu bsd /usr/local/bin/java \
     -Xmx1024M \
     --add-opens java.base/java.lang=ALL-UNNAMED \
     --add-opens java.base/java.time=ALL-UNNAMED \

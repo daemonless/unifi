@@ -5,7 +5,7 @@
 # --------------------------------------------------------------------------
 
 ARG BASE_VERSION=15.1
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-rcd:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="openjdk25-jre-headless mongodb70 snappyjava ca_root_nss"
@@ -60,9 +60,10 @@ RUN mkdir -p /config /var/run/unifi && \
 
 # Copy service definition and init scripts
 COPY root/ /
+RUN chmod +x /daemonless/libexec/* /daemonless/init.d/*
 
 # Make scripts executable
-RUN chmod +x /etc/services.d/*/run /etc/cont-init.d/* /healthz 2>/dev/null || true
+RUN chmod +x /healthz
 
 # Set up s6 service links for unifi and mongodb
 
