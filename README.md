@@ -23,8 +23,7 @@ Ubiquiti UniFi Network Application for managing UniFi access points, switches, a
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
-| `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
-| `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
+| `pkg` / `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
 
 ## Prerequisites
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.

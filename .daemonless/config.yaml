@@ -19,12 +19,11 @@ build:
       # dropped out of that repo; the latest repo has it.
       args:
         BASE_VERSION: "15.1-latest"
-    - tag: pkg
-      containerfile: Containerfile.pkg
-      arch_args:
-        aarch64:
-          BASE_VERSION: "15.1-latest"
+    # pkg is an alias of pkg-latest until the 15.1 quarterly repo has unifi10
+    # again: mongodb70 failed in the 2026-10-22 package run, which skipped
+    # unifi10, and a failed variant blocks the manifests for the other tags.
     - tag: pkg-latest
       containerfile: Containerfile.pkg
+      aliases: ["pkg"]
       args:
         BASE_VERSION: "15.1-latest"
