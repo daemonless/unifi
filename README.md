@@ -22,7 +22,7 @@ Ubiquiti UniFi Network Application for managing UniFi access points, switches, a
 ## Version Tags
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `latest` | **Upstream Binary**. Built from official release. | Most users — recommended. |
+| `latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
 | `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Staying current. |
 
