@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-28T16:40:43Z",
+  "generated": "2026-11-03T21:04:40Z",
   "image": "unifi",
   "tags": {
     "latest-aarch64": {
       "app_version": "10.6.109",
       "arch": "aarch64",
-      "generated": "2026-10-28T16:38:24Z",
+      "generated": "2026-11-03T21:02:29Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -182,7 +182,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -252,21 +252,21 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
@@ -487,7 +487,7 @@
               "GPLv2"
             ],
             "name": "openjdk25-jre-headless",
-            "version": "25.0.4+7.f.1_1"
+            "version": "25.0.5.0.3+1.f.1"
           },
           {
             "licenses": [
@@ -1396,9 +1396,9 @@
       }
     },
     "pkg-latest-aarch64": {
-      "app_version": "10.6.106",
+      "app_version": "10.6.109",
       "arch": "aarch64",
-      "generated": "2026-10-28T16:38:30Z",
+      "generated": "2026-11-03T21:02:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1575,7 +1575,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -1645,7 +1645,7 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
@@ -1659,7 +1659,7 @@
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
@@ -2022,7 +2022,7 @@
               "GPLv2"
             ],
             "name": "openjdk25",
-            "version": "25.0.4+7.f.1_1"
+            "version": "25.0.5.0.3+1.f.1"
           },
           {
             "licenses": [
@@ -2097,7 +2097,7 @@
           },
           {
             "name": "unifi10",
-            "version": "10.6.106"
+            "version": "10.6.109"
           },
           {
             "licenses": [
@@ -2894,7 +2894,7 @@
           {
             "name": "org.xerial.snappy:snappy-java",
             "purl": "",
-            "version": "HEAD-20261016-0346"
+            "version": "HEAD-20261030-0745"
           },
           {
             "name": "org.xerial:sqlite-jdbc",
