@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-03T21:04:40Z",
+  "generated": "2026-11-04T15:40:26Z",
   "image": "unifi",
   "tags": {
     "latest-aarch64": {
       "app_version": "10.6.109",
       "arch": "aarch64",
-      "generated": "2026-11-03T21:02:29Z",
+      "generated": "2026-11-04T15:38:24Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1398,7 +1398,7 @@
     "pkg-latest-aarch64": {
       "app_version": "10.6.109",
       "arch": "aarch64",
-      "generated": "2026-11-03T21:02:35Z",
+      "generated": "2026-11-04T15:38:30Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1652,7 +1652,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
