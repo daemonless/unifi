@@ -49,8 +49,8 @@ services:
       - "8843:8843"
       - "8880:8880"
       - "6789:6789"
-      - "3478:3478"
-      - "10001:10001"
+      - "3478:3478/udp"
+      - "10001:10001/udp"
     annotations:
       org.freebsd.jail.allow.mlock: "true"
     # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-28T15:50:42Z",
+  "generated": "2026-11-04T15:05:27Z",
   "image": "unifi",
   "tags": {
     "latest-amd64": {
       "app_version": "10.6.109",
       "arch": "amd64",
-      "generated": "2026-10-28T15:47:29Z",
+      "generated": "2026-11-04T15:04:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -182,7 +182,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -333,7 +333,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.6.0"
+            "version": "15.0.0"
           },
           {
             "licenses": [
@@ -487,7 +487,7 @@
               "GPLv2"
             ],
             "name": "openjdk25-jre-headless",
-            "version": "25.0.5.0.2+1.f.1"
+            "version": "25.0.5.0.3+1.f.1_1"
           },
           {
             "licenses": [
@@ -1398,7 +1398,7 @@
     "pkg-latest-amd64": {
       "app_version": "10.6.109",
       "arch": "amd64",
-      "generated": "2026-10-28T15:47:27Z",
+      "generated": "2026-11-04T15:04:09Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1575,7 +1575,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -1652,7 +1652,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -1763,7 +1763,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.6.0"
+            "version": "15.0.0"
           },
           {
             "licenses": [
@@ -2022,7 +2022,7 @@
               "GPLv2"
             ],
             "name": "openjdk25",
-            "version": "25.0.5.0.2+1.f.1"
+            "version": "25.0.5.0.3+1.f.1_1"
           },
           {
             "licenses": [
