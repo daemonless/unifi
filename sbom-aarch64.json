@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T15:40:26Z",
+  "generated": "2026-11-12T23:58:58Z",
   "image": "unifi",
   "tags": {
     "latest-aarch64": {
       "app_version": "10.6.109",
       "arch": "aarch64",
-      "generated": "2026-11-04T15:38:24Z",
+      "generated": "2026-11-12T23:56:03Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -280,7 +280,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -333,7 +333,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.6.0"
+            "version": "15.0.0"
           },
           {
             "licenses": [
@@ -487,7 +487,7 @@
               "GPLv2"
             ],
             "name": "openjdk25-jre-headless",
-            "version": "25.0.5.0.3+1.f.1"
+            "version": "25.0.5.0.3+1.f.1_1"
           },
           {
             "licenses": [
@@ -501,7 +501,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -1398,7 +1398,7 @@
     "pkg-latest-aarch64": {
       "app_version": "10.6.109",
       "arch": "aarch64",
-      "generated": "2026-11-04T15:38:30Z",
+      "generated": "2026-11-12T23:56:09Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1689,7 +1689,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -1763,7 +1763,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.6.0"
+            "version": "15.0.0"
           },
           {
             "licenses": [
@@ -2022,7 +2022,7 @@
               "GPLv2"
             ],
             "name": "openjdk25",
-            "version": "25.0.5.0.3+1.f.1"
+            "version": "25.0.5.0.3+1.f.1_1"
           },
           {
             "licenses": [
@@ -2036,7 +2036,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
