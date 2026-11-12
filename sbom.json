@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T15:05:27Z",
+  "generated": "2026-11-12T23:00:05Z",
   "image": "unifi",
   "tags": {
     "latest-amd64": {
       "app_version": "10.6.109",
       "arch": "amd64",
-      "generated": "2026-11-04T15:04:22Z",
+      "generated": "2026-11-12T22:55:20Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -280,7 +280,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -501,7 +501,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -1398,7 +1398,7 @@
     "pkg-latest-amd64": {
       "app_version": "10.6.109",
       "arch": "amd64",
-      "generated": "2026-11-04T15:04:09Z",
+      "generated": "2026-11-12T22:58:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1689,7 +1689,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -2036,7 +2036,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
